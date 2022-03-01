@@ -150,7 +150,7 @@ body{
 }
 
 .project__text{
-    font-size: 15em;
+    font-size: 14em;
     display: block;
     color: #1B171B;
     text-align: center;
@@ -173,3 +173,47 @@ body{
     background-color: #FCFDFC;
 }
 
+.love{
+    height: 100vh;
+    width: 100%;
+    background-color: #1B171B;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.love__text{
+    font-size: 3.5em;
+    color: #FCFDFC;
+    text-align: center;
+    display: flex;
+    justify-content: center;    
+}
+
+.love__animation{
+    font-size: 5em;
+    color: #FCFDFC;
+}
+
+.contact{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact__text{
+    font-size: 5em;
+    text-align: center;
+    justify-content: center;
+}
+
+.contact__btn{
+    font-size: 1.7em;
+    margin-top: 80px;
+    text-align: center;
+    justify-content: center;
+}
