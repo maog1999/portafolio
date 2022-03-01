@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miguel Olivares | Portafolio </title>
+
+    <!--Links-->
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
     <!--Header section-->
     <header class="header">
-        <div class="header__container">
+        <nav class="header__container">
             <div class="header__logo">
                 <object data="./images/logo.svg" type=""></object>
             </div>
@@ -20,8 +23,8 @@
                     <li class="menu__list"><a href="#"></a> Contact</li>
                 </ul>
             </div>
-        </div>
-        <!-- <video src="./images/intro_animation.mp4" autoplay loop></video> -->
+        </nav>
+       <!-- <video src="./images/intro_animation.mp4" autoplay loop></video>-->
     </header>
 
     <!--presentation section-->
@@ -29,32 +32,37 @@
         <div class="intro__animation">
             <h1>Hi! I'm <br> Miguel</h1>
         </div>
-        <div class="intro__text">
-            <h3 class="text__description">Welcome to my portafolio. Please scroll if you want to ...</h3>
+        <div class="intro__text visbyRegular">
+            <h3 class="text__description visbyLight">Welcome to my portafolio. Please scroll if you want to ...</h3>
         </div>
     </section>
 
     <!--Personal info-->
     <div class="aboutme">
-        <object data="./images/m_fondo.svg" type=""></object>
-        <img src="./images/miguel_png.png" alt="Foto de Miguel Olivares">
-        <div class="aboutme__text">
-            <h1>About me</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit massa amet volutpat, nulla. Mi in <br> odio nisl leo risus. Sem luctus risus magna tempus scelerisque turpis enim, condimentum. Sem <br> sed adipiscing sit malesuada. Ac egestas consequat eget rhoncus, ornare nec. Ullamcorper</p>
+        <div class="aboutme__content">
+            <img class="aboutme__picture" src="./images/miguel_png.png" alt="Foto de Miguel Olivares">
+            <div class="aboutme__text visbyLight">
+                <h1 class="aboutme__tittle">About me</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit massa amet volutpat, nulla. Mi in <br> odio nisl leo risus. Sem luctus risus magna tempus scelerisque turpis enim, condimentum. Sem <br> sed adipiscing sit malesuada. Ac egestas consequat eget rhoncus, ornare nec. Ullamcorper</p>
+            </div>
         </div>
+        <div class="aboutme__wallpaper">
+            <object class="aboutme__import" data="./images/m_fondo.svg" type=""></object>
+        </div>
+
     </div>
 
     <!--Scroll projects-->
     <div class="project-transition">
-    <object data="./images/projects-scroll.svg" type=""></object>
+
     </div>
 
     <!--Homy Project-->
-    <section class="project">
+    <section class="project project--homy">
         <div class="project__homy">
-            <h2 class="project__text">HOMY</h2>
-            <h2 class="project__text">HOMY</h2>
-            <h2 class="project__text">HOMY</h2>
+            <h2 class="project__text visbyLight">HOMY</h2>
+            <h2 class="project__text visbyLight">HOMY</h2>
+            <h2 class="project__text visbyLight">HOMY</h2>
         </div>
         <div class="project__subtext">
             <p>ux/ui case project</p>
@@ -70,11 +78,11 @@
     </section>
 
     <!--Nomad Project-->
-    <section class="project">
+    <section class="project project--nomad">
         <div class="project__homy">
-            <h2 class="project__text">NOMAD</h2>
-            <h2 class="project__text">NOMAD</h2>
-            <h2 class="project__text">NOMAD</h2>
+            <h2 class="project__text project__text--nomad visbyLight">NOMAD</h2>
+            <h2 class="project__text project__text--nomad visbyLight">NOMAD</h2>
+            <h2 class="project__text project__text--nomad visbyLight">NOMAD</h2>
         </div>
         <div class="project__subtext">
             <p>ux/ui case project</p>
@@ -88,11 +96,11 @@
     </section>
 
     <!--Sinergia Project-->
-    <section class="project">
+    <section class="project project--sinergia">
         <div class="project__homy">
-            <h2 class="project__text">SINERGIA</h2>
-            <h2 class="project__text">SINERGIA</h2>
-            <h2 class="project__text">SINERGIA</h2>
+            <h2 class="project__text visbyLight">SINERGIA</h2>
+            <h2 class="project__text visbyLight">SINERGIA</h2>
+            <h2 class="project__text visbyLight">SINERGIA</h2>
         </div>
         <div class="project__subtext">
             <p>advertising campaign</p>

@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+@font-face {
+    font-family: 'Visby CF Bold';
+    src: url('../typography/VisbyCF-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Visby CF Regular';
+    src: url('../typography/VisbyCF-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Visby CF Light';
+    src: url('../typography/VisbyCF-Light.otf');
+}
+
+@font-face {
+    font-family: 'Visby CF ExtraLight';
+    src: url('../typography/VisbyCF-Thin.otf');
+}
+
+.visbyRegular{
+    font-family: 'Visby CF Regular';
+}
+.visbyLight{
+    font-family: 'Visby CF Light';
+}
+.visbyBold{
+    font-family: 'Visby CF Bold';
+}
+ul{
+    list-style: none;
+}
+
+body{
+    background-color: #FCFDFC;
+    font-family: 'Visby CF';
+}
+
+.header *{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__container{
+    margin-top: 30px;
+}
+.intro{
+    height: 100vh;
+    width: 100%;
+    
+}
+
+.header__logo{
+    margin: 0px 0 0 140px;
+}
+
+.header__menu *{
+    margin: 0 20px;
+}
+
+.header__menu{
+    margin-right: 60px;
+}
+
+.intro__animation{
+    font-weight: bold;
+    margin-top: 160px;
+    text-align: center;
+    font-size: 7.5em;
+}
+.intro__text{
+    margin-top: 70px;
+    text-align: center;
+    
+}
+
+.text__description{
+    font-size: 1.4em;
+}
+
+.aboutme{
+    height: 1918px;
+    width: 100%;
+    background-color: #1B171B;
+    position: relative;
+}
+
+.aboutme__content{
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aboutme__import{
+    margin-top: 200px;
+}
+
+.aboutme__picture{
+    margin-left: 20%;
+}
+
+.aboutme__text {
+    text-align: center;
+    color: #FCFDFC;
+    margin-top: -105px;
+}
+
+.aboutme__tittle{
+    font-size: 7em;
+}
+
+.aboutme__wallpaper{
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.project-transition{
+    width: 100%;
+    height: 230px;
+    background-image: url('../images/projects-scroll.svg');
+    background-position-y: -25px;
+    background-position-x: -800px;
+
+}
+
+.transition__svg{
+    width: 100%;
+   
+}
+
+.project{
+    position: relative;
+}
+
+.project--homy{
+    background-color: #0303FC;
+    width: 100%;
+}
+
+.project__text{
+    font-size: 15em;
+    display: block;
+    color: #1B171B;
+    text-align: center;
+}
+
+.project__photos{
+    position: absolute;
+    top: 10%;
+    transform: translateZ(-50%);
+}
+.project--nomad{
+    background-color: #1B171B;
+}
+
+.project__text--nomad{
+    color: #FCFDFC;
+}
+
+.project--sinergia{
+    background-color: #FCFDFC;
+}
+
