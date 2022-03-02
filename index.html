@@ -11,30 +11,32 @@
 </head>
 <body>
     <!--Header section-->
-    <header class="header">
-        <nav class="header__container">
-            <div class="header__logo">
-                <object data="./images/logo.svg" type=""></object>
+    <section class="container">
+        <header class="header">
+            <nav class="header__container">
+                <div class="header__logo">
+                    <object data="./images/logo.svg" type=""></object>
+                </div>
+                <div class="header__menu">
+                    <ul class="menu">
+                        <li class="menu__list"><a href="#"></a> Work</li>
+                        <li class="menu__list"><a href="#"></a> About me</li>
+                        <li class="menu__list"><a href="#"></a> Contact</li>
+                    </ul>
+                </div>
+            </nav>
+           <!-- <video src="./images/intro_animation.mp4" autoplay loop></video>-->
+        </header>
+    
+        <!--presentation section-->
+        <section class="intro">
+            <div class="intro__animation">
+                <h1>Hi! I'm <br> Miguel</h1>
             </div>
-            <div class="header__menu">
-                <ul class="menu">
-                    <li class="menu__list"><a href="#"></a> Work</li>
-                    <li class="menu__list"><a href="#"></a> About me</li>
-                    <li class="menu__list"><a href="#"></a> Contact</li>
-                </ul>
+            <div class="intro__text visbyRegular">
+                <h3 class="text__description visbyExtraLight">Welcome to my portafolio. Please scroll if you want to ...</h3>
             </div>
-        </nav>
-       <!-- <video src="./images/intro_animation.mp4" autoplay loop></video>-->
-    </header>
-
-    <!--presentation section-->
-    <section class="intro">
-        <div class="intro__animation">
-            <h1>Hi! I'm <br> Miguel</h1>
-        </div>
-        <div class="intro__text visbyRegular">
-            <h3 class="text__description visbyLight">Welcome to my portafolio. Please scroll if you want to ...</h3>
-        </div>
+        </section>
     </section>
 
     <!--Personal info-->
@@ -60,9 +62,9 @@
     <!--Homy Project-->
     <section class="project project--homy">
         <div class="project__homy">
-            <h2 class="project__text visbyLight">HOMY</h2>
-            <h2 class="project__text visbyLight">HOMY</h2>
-            <h2 class="project__text visbyLight">HOMY</h2>
+            <h2 class="project__text visbyExtraLight">HOMY</h2>
+            <h2 class="project__text visbyExtraLight">HOMY</h2>
+            <h2 class="project__text visbyExtraLight">HOMY</h2>
         </div>
         <div class="project__subtext">
             <p>ux/ui case project</p>
@@ -80,9 +82,9 @@
     <!--Nomad Project-->
     <section class="project project--nomad">
         <div class="project__homy">
-            <h2 class="project__text project__text--nomad visbyLight">NOMAD</h2>
-            <h2 class="project__text project__text--nomad visbyLight">NOMAD</h2>
-            <h2 class="project__text project__text--nomad visbyLight">NOMAD</h2>
+            <h2 class="project__text project__text--nomad visbyExtraLight">NOMAD</h2>
+            <h2 class="project__text project__text--nomad visbyExtraLight">NOMAD</h2>
+            <h2 class="project__text project__text--nomad visbyExtraLight">NOMAD</h2>
         </div>
         <div class="project__subtext">
             <p>ux/ui case project</p>
@@ -98,9 +100,9 @@
     <!--Sinergia Project-->
     <section class="project project--sinergia">
         <div class="project__homy">
-            <h2 class="project__text visbyLight">SINERGIA</h2>
-            <h2 class="project__text visbyLight">SINERGIA</h2>
-            <h2 class="project__text visbyLight">SINERGIA</h2>
+            <h2 class="project__text visbyExtraLight">SINERGIA</h2>
+            <h2 class="project__text visbyExtraLight">SINERGIA</h2>
+            <h2 class="project__text visbyExtraLight">SINERGIA</h2>
         </div>
         <div class="project__subtext">
             <p>advertising campaign</p>
@@ -129,16 +131,21 @@
             <div class="contact__text">
                 <h1 class="visbyLight">Let's start working <br> <b class="visbyBold">together</b></h1>
             </div>
-            <div class="contact__btn visbyBold">
-                <a href="#">Contact me</a>
+            <div class="contact__btn visbyMedium">
+                <a class="btn__style" href="#">Contact me</a>
+            </div>
+            <div class="divider">
+                <img src="./images/footer_rect.png" alt="separador del footer">
             </div>
             <div class="contact__links">
-                <span>Miguel Olivares © 2022</span>
+                <span class="contact__author">Miguel Olivares © 2022</span>
                 <!--preguntar por que no sirven-->
-                <object data="./images/behance_logo.svg" type=""> <a href="https://www.behance.net/maog1999"></a></object>
-                <object data="./images/linkedin_logo.svg" type=""><a href="https://www.linkedin.com/in/miguel-olivares-gonzalez-8123311a4/"></a></object>
-                <object data="./images/instagram_logo.svg" type=""><a href="https://www.instagram.com/miguelolivares9/"></a></object>
-                <button>Back to top</button>
+                <section class="contact__social">
+                    <object data="./images/behance_logo.svg" type=""> <a href="https://www.behance.net/maog1999"></a></object>
+                    <object data="./images/linkedin_logo.svg" type=""><a href="https://www.linkedin.com/in/miguel-olivares-gonzalez-8123311a4/"></a></object>
+                    <object data="./images/instagram_logo.svg" type=""><a href="https://www.instagram.com/miguelolivares9/"></a></object>
+                </section>
+                <button class="contact__btn visbyRegular" >Back to top</button>
             </div>
         </div>
         

@@ -24,6 +24,11 @@
     src: url('../typography/VisbyCF-Thin.otf');
 }
 
+@font-face {
+    font-family: 'Visby CF Medium';
+    src: url('../typography/VisbyCF-Medium.otf;');
+}
+
 .visbyRegular{
     font-family: 'Visby CF Regular';
 }
@@ -33,6 +38,12 @@
 .visbyBold{
     font-family: 'Visby CF Bold';
 }
+.visbyExtraLight{
+    font-family: 'Visby CF ExtraLight';
+}
+.visbyMedium{
+    font-family: 'Visby CF Medium';
+}
 ul{
     list-style: none;
 }
@@ -40,6 +51,10 @@ ul{
 body{
     background-color: #FCFDFC;
     font-family: 'Visby CF';
+}
+
+.container{
+    height: 100vh;
 }
 
 .header *{
@@ -51,7 +66,7 @@ body{
     margin-top: 30px;
 }
 .intro{
-    height: 100vh;
+    margin-top: 170px;
     width: 100%;
     
 }
@@ -70,7 +85,6 @@ body{
 
 .intro__animation{
     font-weight: bold;
-    margin-top: 160px;
     text-align: center;
     font-size: 7.5em;
 }
@@ -146,6 +160,7 @@ body{
 
 .project--homy{
     background-color: #0303FC;
+    height: 100vh;
     width: 100%;
 }
 
@@ -163,6 +178,8 @@ body{
 }
 .project--nomad{
     background-color: #1B171B;
+    height: 100vh;
+
 }
 
 .project__text--nomad{
@@ -171,6 +188,7 @@ body{
 
 .project--sinergia{
     background-color: #FCFDFC;
+    height: 100vh;
 }
 
 .love{
@@ -199,7 +217,7 @@ body{
 
 .contact{
     width: 100%;
-    height: 700px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -212,8 +230,44 @@ body{
 }
 
 .contact__btn{
-    font-size: 1.7em;
+    font-size: 1.4em;
     margin-top: 80px;
     text-align: center;
     justify-content: center;
+}
+
+.btn__style{
+    text-decoration: none;
+    background-color: #0303FC;
+    color: #FCFDFC;
+    padding: 15px 30px;
+    border-radius: 53px;
+}
+
+.divider{
+    margin: 100px;
+    margin-left: 27%;
+    /*preguntar porque el div aparece con un espacio de mas*/
+}
+.contact__links{
+    display: flex;
+    justify-content: center;
+}
+
+.contact__social *{
+    margin: 20px;
+}
+
+.contact__author{
+    margin-top: 25px;
+    margin-right: 50px;
+     /*preguntar como centrar el texto verticalmente en el div*/
+
+}
+
+.contact__btn{
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+    color: #1B171B;
 }
