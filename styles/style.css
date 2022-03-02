@@ -65,6 +65,15 @@ body{
 .header__container{
     margin-top: 30px;
 }
+
+.align__projects{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .intro{
     margin-top: 170px;
     width: 100%;
@@ -156,12 +165,21 @@ body{
 
 .project{
     position: relative;
+    overflow: hidden;
+}
+
+.project__homy{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project--homy{
     background-color: #0303FC;
-    height: 100vh;
-    width: 100%;
 }
 
 .project__text{
@@ -172,14 +190,11 @@ body{
 }
 
 .project__photos{
-    position: absolute;
-    top: 10%;
-    transform: translateZ(-50%);
+    position: relative;
+    z-index: 10;
 }
 .project--nomad{
     background-color: #1B171B;
-    height: 100vh;
-
 }
 
 .project__text--nomad{
@@ -188,7 +203,11 @@ body{
 
 .project--sinergia{
     background-color: #FCFDFC;
-    height: 100vh;
+}
+
+.project__subtext{
+    position: absolute;
+    left: 1px;
 }
 
 .love{
@@ -224,7 +243,8 @@ body{
 }
 
 .contact__text{
-    font-size: 5em;
+    padding-top: 190px;
+    font-size: 4em;
     text-align: center;
     justify-content: center;
 }
@@ -245,27 +265,28 @@ body{
 }
 
 .divider{
-    margin: 100px;
-    margin-left: 27%;
-    /*preguntar porque el div aparece con un espacio de mas*/
+    width: 600px;
+    margin: auto;
+    margin-top: 248px;
 }
+
+.divider img{
+    width: 100%;
+}
+
 .contact__links{
     display: flex;
     justify-content: center;
+    height: 300px;
+    align-items: center;
 }
 
-.contact__social *{
-    margin: 20px;
+.contact__links * {
+    margin: 0 15px;
+    text-decoration: none;
 }
 
-.contact__author{
-    margin-top: 25px;
-    margin-right: 50px;
-     /*preguntar como centrar el texto verticalmente en el div*/
-
-}
-
-.contact__btn{
+.footer__btn {
     background-color: transparent;
     border: none;
     font-size: 1em;
