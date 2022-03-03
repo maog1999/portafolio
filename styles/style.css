@@ -108,7 +108,7 @@ body{
 }
 
 .aboutme{
-    height: 1918px;
+    height: 1480px;
     width: 100%;
     background-color: #1B171B;
     position: relative;
@@ -118,7 +118,7 @@ body{
     width: 35%;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-25%);
     left: 0;
     right: 0;
     margin-left: auto;
@@ -127,6 +127,7 @@ body{
 
 .aboutme__import{
     margin-top: 200px;
+    width: 100%;
 }
 
 .aboutme__picture{
@@ -168,6 +169,10 @@ body{
     overflow: hidden;
 }
 
+.subtext__color{
+    color: #FCFDFC;
+}
+
 .project__homy{
     position: absolute;
     top: 50%;
@@ -176,6 +181,7 @@ body{
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    align-items: center;
 }
 
 .project--homy{
@@ -193,8 +199,47 @@ body{
     position: relative;
     z-index: 10;
 }
+
+.photo__portada{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 3;
+}
+
+.photo__proyecto01{
+    margin-right: 437px;
+    z-index: 2;
+}
+
+.photo__proyecto02{
+    z-index: 2;
+}
+
 .project--nomad{
     background-color: #1B171B;
+}
+
+.subtext__rotate{    
+    transform: rotate(-90deg);
+}
+
+.subtext__rotate2{    
+    transform: rotate(90deg);
+}
+
+.subtext__rotate--white{
+    color: #FCFDFC;
+}
+
+.project__subtext2{
+    font-size: 1.3em;
+    position: absolute;
+    right: 70px;
 }
 
 .project__text--nomad{
@@ -206,8 +251,9 @@ body{
 }
 
 .project__subtext{
+    font-size: 1.3em;
     position: absolute;
-    left: 1px;
+    left: 0px;
 }
 
 .love{
@@ -243,7 +289,7 @@ body{
 }
 
 .contact__text{
-    padding-top: 190px;
+    padding-top: 200px;
     font-size: 4em;
     text-align: center;
     justify-content: center;
