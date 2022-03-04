@@ -1,0 +1,113 @@
+@media all and (max-width: 1830px){
+    .intro{
+        margin-top: 300px;
+
+    }
+}
+
+@media all and (max-width: 1850px){
+
+}
+
+@media all and (max-width: 1730){
+    .photo__portada{
+        width: 30%;
+    }
+}
+
+@media all and (max-width: 1340px){
+    .header__container{
+        margin-left: -40px;
+
+    }
+
+    .header__logo{
+        transform: scale(0.8);
+    }
+
+    .header__menu{
+        margin-right: 40px;
+        font-size: .8em;
+    }
+
+    .project__text{
+        font-size: 13.2em;
+    }
+
+    .photo__nomad{
+        transform: scale(0.9);
+    }
+}
+
+@media all and (max-width: 1150px){
+    .project__text{
+        font-size: 11.8em;
+    }
+
+    .photo__nomad{
+        transform: scale(0.8);
+    }
+}
+
+@media all and (max-width: 1060px){
+    .header__container{
+        margin-left: -10px;
+
+    }
+    .intro{
+        margin-top: 350px;
+    }
+
+    .header__logo{
+        margin-left: 70px;
+        transform: scale(0.7);
+    }
+
+    .header__menu{
+        margin-right: 20px;
+        font-size: .75em;
+    }
+
+    .intro__animation{
+        font-size: 6.5em;
+    }
+
+    .text__description{
+        font-size: 1em;
+    }
+
+    .intro__text{
+        margin-top: 50px;
+    }
+
+    .project__text{
+        font-size: 10.7em;
+    }
+
+    .photo__nomad{
+        transform: scale(0.74);
+    }
+}
+
+@media all and (max-width: 950px){
+    
+}
+
+@media all and (max-width: 780px){
+    .header__logo{
+        margin-left: 50px;
+        transform: scale(0.5);
+    }
+    
+    .intro__animation{
+        font-size: 5.6em;
+    }
+
+    .text__description{
+        font-size: 0.8em;
+    }
+
+    .intro__text{
+        margin-top: 40px;
+    }
+}
