@@ -3,22 +3,52 @@
         margin-top: 300px;
 
     }
+
 }
 
 @media all and (max-width: 1850px){
 
 }
 
-@media all and (max-width: 1730){
-    .photo__portada{
+@media all and (max-width: 1730px){
+    /*.photo__portada{
         width: 30%;
+    }*/
+    
+    .aboutme__tittle{
+        font-size: 6em;
     }
+    
+    .aboutme__text {
+        position: absolute;
+        left: -17%;
+        right: 0;
+        width: 134%;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 2;
+        text-align: center;
+        color: #FCFDFC;
+        margin-top: -10%;
+    }
+
+    .aboutme__picture{
+        width: 100%;
+        margin-top: 42%;
+        margin-bottom: -29%;
+        transform: scale(0.7);
+    }
+    
 }
 
 @media all and (max-width: 1340px){
     .header__container{
         margin-left: -40px;
 
+    }
+
+    .aboutme{
+        height: 1200px;
     }
 
     .header__logo{
@@ -35,7 +65,18 @@
     }
 
     .photo__nomad{
-        transform: scale(0.9);
+        
+    }
+
+    .aboutme__tittle{
+        font-size: 6em;
+    }
+
+    .aboutme__picture{
+        width: 100%;
+        margin-top: 56%;
+        margin-bottom: -29%;
+        transform: scale(0.7);
     }
 }
 
@@ -96,6 +137,13 @@
     .contact__text{
         font-size: 3.5em;
     }
+    
+    .aboutme__picture{
+        width: 100%;
+        margin-top: 68%;
+        margin-bottom: -29%;
+        transform: scale(0.7);
+    }
 }
 
 @media all and (max-width: 980px){
@@ -144,9 +192,15 @@
     .love__animation{
         font-size: 4.5em;
     }
+    .aboutme__picture{
+        width: 100%;
+        margin-top: 78%;
+        margin-bottom: -29%;
+        transform: scale(0.7);
+    }
 }
 
-@media all and (max-width: 780px){
+@media all and (max-width: 800px){
     .header__logo{
         margin-left: 50px;
         transform: scale(0.5);
@@ -170,6 +224,10 @@
 
     .photo__nomad{
         transform: scale(0.55);
+    }
+
+    .aboutme__tittle{
+        font-size: 5em;
     }
 
     .project__subtext{
@@ -215,5 +273,25 @@
 
     .project__photos video{
         width: 500px;
+    }
+
+    .aboutme__picture{
+        width: 100%;
+        margin-top: 66%;
+        margin-bottom: -27%;
+        transform: scale(0.75);
+    }
+
+    .aboutme__text {
+        position: absolute;
+        left: -39%;
+        right: 0;
+        width: 176%;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 2;
+        text-align: center;
+        color: #FCFDFC;
+        margin-top: 60%;
     }
 }

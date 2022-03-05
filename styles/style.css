@@ -115,14 +115,20 @@ body{
 }
 
 .aboutme__content{
-    width: 35%;
+    /*width: 35%;
     position: absolute;
     top: 50%;
     transform: translateY(-25%);
     left: 0;
     right: 0;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;*/
+    width: 40%;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
 .aboutme__import{
@@ -131,13 +137,26 @@ body{
 }
 
 .aboutme__picture{
-    margin-left: 20%;
+    width: 100%;
+    margin-top: 18%;
+    transform: scale(0.6);
 }
 
 .aboutme__text {
+    position: absolute;
+    left: 0; 
+    right: 0;
+    width: 80%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    z-index: 2;
     text-align: center;
     color: #FCFDFC;
-    margin-top: -105px;
+    margin-top: -48%;
+}
+
+.aboutme__text p{
+    font-size: 1.2em;
 }
 
 .aboutme__tittle{
@@ -198,6 +217,8 @@ body{
 
 .project__photos{
     position: relative;
+    width: 100%;
+    height: auto;
     z-index: 10;
 }
 
@@ -205,20 +226,52 @@ body{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 0;
-    right: 0;
+    width: 31%;
+    left: 0px;
+    right: 0px;
     margin-left: auto;
     margin-right: auto;
     z-index: 3;
 }
 
 .photo__proyecto01{
-    margin-right: 437px;
+    position: absolute;
+    width: 25%;
+    top: 50%;
+    left: 11%;
+    transform: translateY(-50%);
     z-index: 2;
 }
 
 .photo__proyecto02{
+    position: absolute;
+    width: 25%;
+    top: 50%;
+    right: 11%;
+    transform: translateY(-50%);
     z-index: 2;
+}
+
+.photo__nomad{
+    width: 34%;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.project__video{
+    position: absolute;
+    width: 40%;
+    left: 0px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .project--nomad{
