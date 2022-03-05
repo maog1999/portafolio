@@ -47,6 +47,11 @@
     .photo__nomad{
         transform: scale(0.8);
     }
+
+    .project__photos video{
+        width: 700px;
+    }
+
 }
 
 @media all and (max-width: 1060px){
@@ -87,10 +92,58 @@
     .photo__nomad{
         transform: scale(0.74);
     }
+
+    .contact__text{
+        font-size: 3.5em;
+    }
 }
 
-@media all and (max-width: 950px){
+@media all and (max-width: 980px){
+    .project__subtext{
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        bottom: 15%;
+        width: 170px;
     
+    }
+    .project__subtext--ad{
+        position: absolute;
+        left: -20px; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        bottom: 15%;
+        width: 208px;
+    
+    }
+    .subtext__rotate{
+        transform: rotate(0deg);
+    }
+
+    .project__subtext2{
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        top: 15%;
+        width: 70px;
+        
+    }
+    .subtext__rotate2{
+            transform: rotate(0deg);
+    }
+
+    .love__text{
+        font-size: 3em;
+    }
+
+    .love__animation{
+        font-size: 4.5em;
+    }
 }
 
 @media all and (max-width: 780px){
@@ -109,5 +162,58 @@
 
     .intro__text{
         margin-top: 40px;
+    }
+
+    .project__text{
+        font-size: 8em;
+    }
+
+    .photo__nomad{
+        transform: scale(0.55);
+    }
+
+    .project__subtext{
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        bottom: 22%;
+        width: 170px;
+    
+    }
+
+    .project__subtext--ad{
+        position: absolute;
+        left: -20px; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        bottom: 22%;
+        width: 208px;
+    
+    }
+
+    .project__subtext2{
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        top: 22%;
+        width: 70px;
+        
+    }
+
+    .love__text{
+        font-size: 2em;
+    }
+
+    .love__animation{
+        font-size: 3.5em;
+    }
+
+    .project__photos video{
+        width: 500px;
     }
 }
