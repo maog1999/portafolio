@@ -9,6 +9,9 @@
     <!--Links-->
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/mediaqueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+
+
 </head>
 <body>
     <!--Header section-->
@@ -19,10 +22,13 @@
                     <object data="./images/logo.svg" type=""></object>
                 </div>
                 <div class="header__menu">
+                    <div class="openMenu"><i class="fa fa-bars"></i></div>
                     <ul class="menu">
-                        <li class="menu__list"><a href="#"></a> Work</li>
-                        <li class="menu__list"><a href="#"></a> About me</li>
-                        <li class="menu__list"><a href="#"></a> Contact</li>
+                        <li class="menu__list"><a href="#">Work</a> </li>
+                        <li class="menu__list"><a href="#">About me</a> </li>
+                        <li class="menu__list"><a href="#">Contact</a> </li>
+                        <div class="closeMenu"><i class="fa fa-times"></i></div>
+
                     </ul>
                 </div>
             </nav>
@@ -158,5 +164,7 @@
         </div>
         
     </footer>
+
+    <script src="./actions.js"></script>
 </body>
 </html>
