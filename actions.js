@@ -1,3 +1,4 @@
+/*gsap.to("")*/
 const menu = document.querySelector('.menu');
 const closeMenu = document.querySelector('.closeMenu');
 const openMenu = document.querySelector('.openMenu');
