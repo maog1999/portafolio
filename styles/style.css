@@ -120,6 +120,13 @@ body{
 
 
 .intro__animation{
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    top: 50%;
+    transform: translateY(-60%);
     font-weight: bold;
     text-align: center;
     font-size: 6.25vw;
@@ -131,7 +138,15 @@ body{
 }
 
 .text__description{
-    font-size: 1.1666vw;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    top: 68%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 1.1vw;
 }
 
 .aboutme{
@@ -350,8 +365,12 @@ body{
 }
 
 .love__animation{
-    font-size: 5em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 4em;
     color: #FCFDFC;
+    overflow: hidden;
 }
 
 .contact{
@@ -364,6 +383,8 @@ body{
 }
 
 .contact__text{
+    display: flex;
+    width: 100%;
     padding-top: 200px;
     font-size: 4em;
     text-align: center;
@@ -386,13 +407,14 @@ body{
 }
 
 .divider{
-    width: 600px;
-    margin: auto;
+    display: flex;
+    width: 100%;
+    justify-content: center;
     margin-top: 248px;
 }
 
 .divider img{
-    width: 100%;
+    width: 600px;
 }
 
 .contact__links{
@@ -400,6 +422,7 @@ body{
     justify-content: center;
     height: 300px;
     align-items: center;
+    padding: 30px;
 }
 
 .contact__links * {

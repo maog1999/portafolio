@@ -18,13 +18,8 @@
         margin-bottom: -29%;
         transform: scale(0.7);
     }
-    
-}
 
-@media all and (max-width: 1696px){
-    .divider{
-        margin: 182px auto auto;
-    }
+    
 }
 
 @media all and (max-width: 1490px){
@@ -34,6 +29,14 @@
 }
 
 @media all and (max-width: 1340px){
+    .intro__animation{
+        font-size: 8vw;
+
+    }
+    .text__description{
+        font-size: 1.5vw;
+    }
+    
     .menu__list a{
         margin-right: 30px;
     }
@@ -69,8 +72,12 @@
         margin-left: -10px;
 
     }
-    .intro{
-        margin-top: 350px;
+    .intro__animation{
+        font-size: 10vw;
+    }
+    
+    .text__description{
+        font-size: 1.7vw;
     }
 
     .header__logo{
@@ -95,12 +102,20 @@
 }
 
 @media all and (max-width: 1021px){
+    .aboutme{
+        height: 1000px;
+    }
     .contact__text{
         padding-top: 142px;
     }
     
+
+    .aboutme__text p{
+        font-size: 1em;
+    }
+
     .divider{
-        margin: 73px auto auto;
+        margin-top: 145px;
     }
 }
 
@@ -111,7 +126,7 @@
         right: 0; 
         margin-left: auto; 
         margin-right: auto; 
-        bottom: 15%;
+        bottom: 10%;
         width: 170px;
     
     }
@@ -135,7 +150,7 @@
         right: 0; 
         margin-left: auto; 
         margin-right: auto; 
-        top: 15%;
+        top: 10%;
         width: 70px;
         
     }
@@ -147,18 +162,27 @@
         font-size: 3em;
     }
 
-    .love__animation{
-        font-size: 4.5em;
-    }
     .aboutme__picture{
         width: 100%;
         margin-top: 78%;
         margin-bottom: -29%;
         transform: scale(0.7);
     }
+
+    .photo__nomad{
+        width: 50%;
+    }
+
+    .project__text{
+        font-size: 16vw;
+    }
+
+    .project__video{
+        width: 60%;
+    }
 }
 
-@media all and (max-width: 800px){
+@media all and (max-width: 830px){
 
     .menu{
         height: 100vh;
@@ -209,26 +233,22 @@
         margin-left: 50px;
         transform: scale(0.5);
     }
-    
+
     .intro__animation{
-        font-size: 5.6em;
+        font-size: 14vw;
     }
 
     .text__description{
-        font-size: 0.8em;
+        font-size: 2.5vw;
     }
-
-    .intro__text{
-        margin-top: 40px;
-    }
-
+    
     .project__subtext{
         position: absolute;
         left: 0; 
         right: 0; 
         margin-left: auto; 
         margin-right: auto; 
-        bottom: 22%;
+        bottom: 14%;
         width: 170px;
     
     }
@@ -239,7 +259,7 @@
         right: 0; 
         margin-left: auto; 
         margin-right: auto; 
-        bottom: 22%;
+        bottom: 14%;
         width: 208px;
     
     }
@@ -250,17 +270,9 @@
         right: 0; 
         margin-left: auto; 
         margin-right: auto; 
-        top: 22%;
+        top: 14%;
         width: 70px;
         
-    }
-
-    .love__text{
-        font-size: 2em;
-    }
-
-    .love__animation{
-        font-size: 3.5em;
     }
 
     .aboutme__picture{
@@ -280,24 +292,224 @@
         z-index: 2;
         text-align: center;
         color: #FCFDFC;
-        margin-top: 60%;
+        margin-top: 30%;
     }
-
 }
 
-@media all and (max-width: 650px){
-    .divider{
-        width: 400px;
+@media all and (max-width: 761px){
+    .photo__portada{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 45%;
+        left: 0px;
+        right: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 3;
     }
+    
+    .photo__proyecto01{
+        position: absolute;
+        width: 25%;
+        top: 50%;
+        left: 14%;
+        transform: translateY(-137%);
+        z-index: 3;;
+    }
+    
+    .photo__proyecto02{
+        position: absolute;
+        width: 25%;
+        top: 50%;
+        right: 16%;
+        transform: translateY(29%);
+        z-index: 2;
+    }
+}
+
+@media all and (max-width: 679px){
+    .project__subtext{
+        font-size: 0.9em;
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        bottom: 14%;
+        width: 120px;
+    }
+    .project__subtext2{
+        font-size: 0.9em;
+        top: 14%;
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        top: 14%;
+        width: 44px;
+    }
+    .project__subtext--ad{
+        font-size: 0.9em;
+        position: absolute;
+        left: -20px; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        bottom: 14%;
+        width: 130px;
+    }
+
+    .aboutme__text p{
+        font-size: 0.9em;
+    }
+ 
     .contact__text{
         font-size: 3em;
     }
     .contact__btn{
         font-size: 1em;
     }
+    .love__text{
+        font-size: 2em;
+    }
 
-  
-    /*
-    .contact__links span{
-    }*/
+    .love__animation{
+        font-size: 3.5em;
+    }
+    .divider img{
+        width: 410px;
+    }
+ 
+    .contact__links{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contact__links *{
+        margin: 8px;
+    }
+    .contact__social{
+        transform: scale(0.8);
+    }
+    .contact__author{
+        margin-left: 36px;
+        font-size: 0.8em;
+    }
+
+    .footer__btn{
+        font-size: 0.8em;
+      margin-left: 69px;  
+    }
+}
+
+@media all and (max-width: 600px){
+    .text__description{
+        top: 66%;
+        font-size: 2.7vw;
+    }
+    .aboutme__text{
+        position: absolute;
+        left: -39%;
+        right: 0;
+        width: 176%;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 2;
+        text-align: center;
+        color: #FCFDFC;
+        margin-top: 57%;
+    }
+    .aboutme__picture{
+        width: 100%;
+        margin-top: 87%;
+        margin-bottom: -27%;
+        transform: scale(0.75);
+    }
+    .aboutme__tittle{
+        font-size: 11vw;
+    }
+}
+
+@media all and (max-width: 550px){
+    .text__description{
+        top: 63%;
+        font-size: 2.7vw;
+    }
+}
+
+@media all and (max-width: 470px){
+    .aboutme__picture{
+        width: 100%;
+        margin-top: 108%;
+        margin-bottom: -27%;
+        transform: scale(0.75);
+    }
+    .aboutme__tittle{
+        font-size: 11vw;
+    }
+    .contact__text{
+        font-size: 2.2em;
+    }
+    .love__text{
+        font-size: 1em;
+    }
+
+    .love__animation{
+        font-size: 2.5em;
+    }
+    .divider{
+        margin-top: 254px;
+
+    }
+    .divider img{
+        width: 267px;
+    }
+    .contact__social{
+        transform: scale(0.5);
+    }
+    .contact__author{
+        margin-left: 44px;
+        font-size: 0.7em;
+    }
+
+    .footer__btn{
+        font-size: 0.7em;
+      margin-left: 76px;  
+    }
+}
+
+@media all and (max-width: 420px){
+    .text__description{
+        top: 59%;
+        font-size: 2.9vw;
+    }
+}
+
+@media all and (max-width: 400px){
+    .aboutme__picture{
+        width: 100%;
+        margin-top: 128%;
+        margin-bottom: -27%;
+        transform: scale(0.75);
+    }
+    .aboutme__tittle{
+        font-size: 11vw;
+    }
+    .contact__text{
+        font-size: 1.9em;
+    }
+
+    .contact__btn{
+        font-size: 0.8em;
+
+    }
+    .love__text{
+        font-size: 0.6em;
+    }
+
+    .love__animation{
+        font-size: 2em;
+    }
 }
