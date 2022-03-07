@@ -2,6 +2,7 @@
 const menu = document.querySelector('.menu');
 const closeMenu = document.querySelector('.closeMenu');
 const openMenu = document.querySelector('.openMenu');
+const mybutton = document.getElementById("myBtn");
 
 
 
@@ -15,4 +16,8 @@ function show(){
 }
 function close(){
     menu.style.top = '-100%';
+}
+
+function topFunction() {
+    document.documentElement.scrollTop = 0; //For chrome n others  
 }

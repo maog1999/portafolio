@@ -326,9 +326,36 @@
         transform: translateY(29%);
         z-index: 2;
     }
+
+    .project__transition{
+        font-size: 7vw;
+    }
+    .line{
+        width: 41vw;
+        height: 0.75vw;
+        display: flex;
+        transform: rotate(0deg);
+        margin: 0 auto;
+        margin-bottom: 7px;
+    
+    }
+    .transition__lastest{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    .transition__projects{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
 }
 
 @media all and (max-width: 679px){
+    .aboutme{
+        height: 800px;
+    }
     .project__subtext{
         font-size: 0.9em;
         position: absolute;
@@ -511,5 +538,8 @@
 
     .love__animation{
         font-size: 2em;
+    }
+    .aboutme{
+        height: 680px;
     }
 }
