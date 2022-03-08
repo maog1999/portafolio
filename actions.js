@@ -4,6 +4,75 @@ const closeMenu = document.querySelector('.closeMenu');
 const openMenu = document.querySelector('.openMenu');
 const mybutton = document.getElementById("myBtn");
 
+ScrollReveal().reveal('.intro');
+ScrollReveal().reveal('.aboutme', { delay: 300 });
+
+//--------Lastest projects animation---------
+gsap.to(".projects", {
+    scrollTrigger: {
+        trigger: ".projects",
+        endTrigger: ".projects",
+        start: "top top",
+        end: "+=1800",
+        pin: true,
+        /*markers: {
+            startColor: "red",
+            endColor: "white",
+            fontSize: "2em",
+        },*/
+    }
+});
+
+gsap.to(".transition__lastest", {
+    x:561,
+    duration: 2000,
+    scrollTrigger: {
+        trigger: ".transition__lastest",
+        start: "-230",
+        end: "+=1500",
+        scrub: 0.1,
+        toggleActions: "restart none none none",
+        markers: {
+            startColor: "yellow",
+            endColor: "red",
+            fontSize: "2em",
+        },
+    }
+});
+
+gsap.to(".transition__projects", {
+    x:-555,
+    duration: 2000,
+    scrollTrigger: {
+        trigger: ".transition__projects",
+        start: "-400",
+        end: "+=1500",
+        scrub: 0.1,
+        toggleActions: "restart none none none",
+        /*markers: {
+            startColor: "yellow",
+            endColor: "red",
+            fontSize: "2em",
+        },*/
+    }
+});
+
+gsap.to(".line", {
+    rotate: 0,
+    duration: 2000,
+    scrollTrigger: {
+        trigger: ".line",
+        start: "-400",
+        end: "+=1500",
+        scrub: 0.1,
+        toggleActions: "restart none none none",
+        /*markers: {
+            startColor: "red",
+            endColor: "red",
+            fontSize: "2em",
+        },*/
+    }
+});
 
 //---------Scrolling animations---------
 gsap.to(".project__video", {
@@ -21,7 +90,7 @@ gsap.to(".project__video", {
             fontSize: "2em",
         },*/
     }
-})
+});
 
 gsap.to(".project--sinergia", {
     scrollTrigger: {
@@ -29,80 +98,14 @@ gsap.to(".project--sinergia", {
         start: "top top",
         end: "+=6000",
         pin: true,
-        anticipatePin: 1,
         markers: {
             startColor: "yellow",
             endColor: "yellow",
             fontSize: "2em",
         },
     }
-})
-//--------Lastest projects animation---------
-gsap.to(".projects", {
-    scrollTrigger: {
-        trigger: ".projects",
-        endTrigger: ".projects",
-        start: "top top",
-        end: "+=1800",
-        pin: ".project__transition",
-        /*markers: {
-            startColor: "red",
-            endColor: "white",
-            fontSize: "2em",
-        },*/
-    }
-})
+});
 
-gsap.to(".transition__lastest", {
-    x:561,
-    duration: 2000,
-    scrollTrigger: {
-        trigger: ".transition__lastest",
-        start: "-230",
-        end: "+=1500",
-        scrub: 0.1,
-        toggleActions: "restart none none none",
-        markers: {
-            startColor: "yellow",
-            endColor: "red",
-            fontSize: "2em",
-        },
-    }
-})
-
-gsap.to(".transition__projects", {
-    x:-555,
-    duration: 2000,
-    scrollTrigger: {
-        trigger: ".transition__projects",
-        start: "-400",
-        end: "+=1500",
-        scrub: 0.1,
-        toggleActions: "restart none none none",
-        /*markers: {
-            startColor: "yellow",
-            endColor: "red",
-            fontSize: "2em",
-        },*/
-    }
-})
-
-gsap.to(".line", {
-    rotate: 0,
-    duration: 2000,
-    scrollTrigger: {
-        trigger: ".line",
-        start: "-400",
-        end: "+=1500",
-        scrub: 0.1,
-        toggleActions: "restart none none none",
-        /*markers: {
-            startColor: "red",
-            endColor: "red",
-            fontSize: "2em",
-        },*/
-    }
-})
 //---------Menu responsive animation---------
 openMenu.addEventListener('click',show);
 closeMenu.addEventListener('click',close);
