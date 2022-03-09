@@ -24,7 +24,7 @@ gsap.to(".projects", {
 });
 
 gsap.to(".transition__lastest", {
-    x:561,
+    x:592,
     duration: 2000,
     scrollTrigger: {
         trigger: ".transition__lastest",
@@ -41,7 +41,7 @@ gsap.to(".transition__lastest", {
 });
 
 gsap.to(".transition__projects", {
-    x:-555,
+    x:-548,
     duration: 2000,
     scrollTrigger: {
         trigger: ".transition__projects",
