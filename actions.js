@@ -16,6 +16,11 @@ ScrollReveal().reveal('.aboutme__text', {
     origin: 'bottom',
     distance: '-100px',
 });
+ScrollReveal().reveal('.project__transition', { 
+    duration: 2000,
+    origin: 'bottom',
+    distance: '-100px',
+});
 ScrollReveal().reveal('.project__photos', { 
     duration: 2000,
     origin: 'bottom',
