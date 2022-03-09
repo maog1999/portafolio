@@ -1,4 +1,19 @@
+@media all and (max-width: 1875px){
+    .transition__lastest{
+        margin-left: 190px;
+    }
+    .transition__projects{
+        margin-right: 180px;
+    }
+}
+
 @media all and (max-width: 1730px){
+    .transition__lastest{
+        margin-left: 130px;
+    }
+    .transition__projects{
+        margin-right: 127px;
+    }
     .aboutme__text {
         position: absolute;
         left: -17%;
@@ -22,10 +37,34 @@
     
 }
 
+@media all and (max-width: 1460px){
+    .transition__lastest{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    .transition__projects{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .line{
+        width: 25vw;
+        height: 0.5vw;
+        display: flex;
+        transform: rotate(0deg);
+        margin: 0 auto;
+        margin-bottom: 7px;
+    
+    }
+}
+
 @media all and (max-width: 1490px){
     .menu__list a{
         margin-right: 70px;
     }
+
 }
 
 @media all and (max-width: 1340px){
@@ -330,26 +369,7 @@
     .project__transition{
         font-size: 7vw;
     }
-    .line{
-        width: 41vw;
-        height: 0.75vw;
-        display: flex;
-        transform: rotate(0deg);
-        margin: 0 auto;
-        margin-bottom: 7px;
-    
-    }
-    .transition__lastest{
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-    }
-    
-    .transition__projects{
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-    }
+
 }
 
 @media all and (max-width: 679px){
