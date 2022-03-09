@@ -4,8 +4,47 @@ const closeMenu = document.querySelector('.closeMenu');
 const openMenu = document.querySelector('.openMenu');
 const mybutton = document.getElementById("myBtn");
 
-ScrollReveal().reveal('.intro');
-ScrollReveal().reveal('.aboutme', { delay: 300 });
+//------Scroll Reveal-------
+ScrollReveal().reveal('.container', { 
+    delay: 100,
+    duration: 1500,
+    origin: 'bottom',
+    distance: '-50px',
+});
+ScrollReveal().reveal('.aboutme__text', { 
+    duration: 2200,
+    origin: 'bottom',
+    distance: '-100px',
+});
+ScrollReveal().reveal('.project__photos', { 
+    duration: 2000,
+    origin: 'bottom',
+    distance: '-150px',
+});
+
+ScrollReveal().reveal('.photo__nomad', { 
+    duration: 2000,
+    origin: 'bottom',
+    distance: '-150px',
+});
+ScrollReveal().reveal('.love__animation', { 
+    duration: 2500,
+    origin: 'top',
+    distance: '-150px',
+});
+ScrollReveal().reveal('.contact__text', {
+    delay: 500, 
+    duration: 2000,
+    origin: 'top',
+    distance: '-150px',
+});
+ScrollReveal().reveal('.contact__btn', {
+    delay: 550,
+    duration: 2000,
+    origin: 'top',
+    distance: '-150px',
+});
+//--------
 
 ScrollTrigger.matchMedia({
     "(min-width: 1460px)": function() {
@@ -51,11 +90,11 @@ ScrollTrigger.matchMedia({
                 end: "+=1500",
                 scrub: 0.1,
                 toggleActions: "restart none none none",
-                markers: {
+                /*markers: {
                     startColor: "yellow",
                     endColor: "red",
                     fontSize: "2em",
-                },
+                },*/
             }
         });
         
@@ -99,11 +138,11 @@ ScrollTrigger.matchMedia({
                 start: "top top",
                 end: "+=6000",
                 pin: true,
-                markers: {
+                /*markers: {
                     startColor: "yellow",
                     endColor: "yellow",
                     fontSize: "2em",
-                },
+                },*/
             }
         });
         
