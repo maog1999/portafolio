@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin View</title>
+    <link rel="stylesheet" href="./styles/styles_sass.css">
+</head>
+<body class="white">
+    <!--Header section-->
+    <header class="header">
+        <nav class="header__container">
+            <div class="header__logo">
+                <object data="./images/logo.svg" type=""></object>
+            </div>
+            <div class="header__menu">
+                <div class="openMenu"><i class="fa fa-bars"></i></div>
+                <ul class="menu">
+                    <li class="menu__list__black"><a href="#">Shop</a> </li>
+                    <li class="menu__list__black"><a href="#">Login</a> </li>
+                    <li class="menu__list__black"><a href="#">Cart</a> </li>
+                    <div class="closeMenu"><i class="fa fa-times"></i></div>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    
+    <main class="form" id="form">
+        <h1 class="form__tittle visbyExtraLight">Add products</h1>
+        <div class="separator"></div>
+
+        <form id="product" class="product" action="">
+
+            <div class="description__left">
+                <label>
+                    <input type="radio" name="status">
+                    T-shirt
+                </label>
+                <label>
+                    <input type="radio" name="status">
+                    Hoddie
+                </label>   
+                <label>
+                    <input type="radio" name="status">
+                    Cap
+                </label>               
+                
+                <input placeholder="Product name" id="product__name" type="text" required> 
+                <input placeholder="Price" id="product__price" type="text" required>
+                <input placeholder="Quantity" id="product__quantity" type="text" required> 
+                <input placeholder="Description" id="product__description" type="text" required> 
+
+    
+                <label>
+                    <input type="radio" name="status">
+                    S
+                </label>
+                <label>
+                    <input type="radio" name="status">
+                    M
+                </label>   
+                <label>
+                    <input type="radio" name="status">
+                    L
+                </label>
+            </div>
+
+            <div class="description__right">
+                <input id="product__image" type="file" accept=".png,.jpg,.jpeg" required>
+            </div>
+
+            <input id="product__submit" type="submit" value="Cargar">
+
+            
+        </form>
+
+    </main>
+
+    <script src="./logic/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+@use 'login';
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
+}
+
+@font-face {
+  font-family: 'visby_cflight';
+  src: url("../typography/visbycf-light-webfont.woff2") format("woff2"), url("../typography/visbycf-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'visby_cfregular';
+  src: url("../tipography/visbycf-regular-webfont.woff2") format("woff2"), url("../tipography/visbycf-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'visby_cfthin';
+  src: url("../tipography/visbycf-thin-webfont.woff2") format("woff2"), url("../tipography/visbycf-thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'visby_cfbold';
+  src: url("../tipography/visbycf-bold-webfont.woff2") format("woff2"), url("../tipography/visbycf-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'visby_cfbold';
+  src: url("../tipography/visbycf-bold-webfont.woff2") format("woff2"), url("../tipography/visbycf-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'visby_cflight';
+  src: url("../tipography/visbycf-light-webfont.woff2") format("woff2"), url("../tipography/visbycf-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'visby_cfregular';
+  src: url("../tipography/visbycf-regular-webfont.woff2") format("woff2"), url("../tipography/visbycf-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'visby_cfthin';
+  src: url("visbycf-thin-webfont.woff2") format("woff2"), url("visbycf-thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.visbyRegular {
+  font-family: 'Visby CF Regular' sans-serif;
+}
+
+.visbyLight {
+  font-family: 'Visby CF Light';
+}
+
+.visbyBold {
+  font-family: 'Visby CF Bold';
+}
+
+.visbyExtraLight {
+  font-family: 'Visby CF ExtraLight';
+}
+
+.visbyMedium {
+  font-family: 'Visby CF Medium';
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: #1B171B;
+  font-family: 'Visby CF';
+}
+
+.white {
+  background-color: #FCFDFC;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-color: #1B171B;
+}
+
+.header * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__container {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.header__logo {
+  margin: 0px 0 0 140px;
+}
+
+.header__menu {
+  margin-right: 60px;
+}
+
+.header__menu * {
+  margin: 0 0px;
+  overflow: hidden;
+}
+
+.menu__list a {
+  text-decoration: none;
+  color: #FCFDFC;
+  margin-right: 80px;
+}
+
+.menu__list :hover {
+  color: #0303FC;
+  cursor: pointer;
+}
+
+.menu__list__black a {
+  color: #1B171B;
+  text-decoration: none;
+  margin-right: 80px;
+}
+
+.menu__list__black :hover {
+  color: #0303FC;
+  cursor: pointer;
+}
+
+.openMenu {
+  overflow: hidden;
+  font-size: 1.8rem;
+  display: none;
+  cursor: pointer;
+}
+
+.closeMenu {
+  font-size: 1.4rem;
+  display: none;
+  cursor: pointer;
+}
+
+.login__tittle {
+  text-align: center;
+  color: #FCFDFC;
+  font-size: 3.8em;
+  margin-top: 110px;
+}
+
+.login .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 135px;
+}
+
+.login__inputs {
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+}
+
+.login__inputs input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #8A8A8D;
+  width: 380px;
+  height: 26px;
+  margin-bottom: 34px;
+  background-color: transparent;
+  color: #FCFDFC;
+  font-family: 'Visby CF';
+  font-size: 1em;
+  opacity: 0.7;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.login__inputs input:focus {
+  opacity: 1;
+  border-bottom: 1px solid #FCFDFC;
+}
+
+.login__inputs .inputs__name {
+  width: 170px;
+  margin-right: 35px;
+}
+
+.login__inputs .inputs__lastname {
+  width: 170px;
+}
+
+.login__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 65px;
+}
+
+.login__btn a {
+  text-decoration: none;
+  text-align: center;
+  width: 380px;
+  height: 55px;
+  border-radius: 53px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.login__btn .login__confirmation {
+  background-color: #FCFDFC;
+  color: #1B171B;
+}
+
+.login__btn .create__confirmation {
+  border: 1px solid #FCFDFC;
+  color: #FCFDFC;
+}
+
+.form__tittle {
+  text-align: center;
+  color: #1B171B;
+  font-size: 3.8em;
+  margin-top: 110px;
+  margin-bottom: 50px;
+}
+
+.form .separator {
+  width: 890px;
+  height: 1px;
+  background-color: #8A8A8D;
+  margin: auto;
+}
+
+.product {
+  margin-top: 100px;
+}
+/*# sourceMappingURL=styles_sass.css.map */

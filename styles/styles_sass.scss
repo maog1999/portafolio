@@ -1,0 +1,297 @@
+//import
+@use 'login';
+
+// Variables
+$white-maog: #FCFDFC;
+$black-maog: #1B171B;
+$blue-maog: #0303FC;
+$gray-maog: #8A8A8D;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+@font-face {
+    font-family: 'visby_cflight';
+    src: url('../typography/visbycf-light-webfont.woff2') format('woff2'),
+         url('../typography/visbycf-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'visby_cfregular';
+    src: url('../tipography/visbycf-regular-webfont.woff2') format('woff2'),
+         url('../tipography/visbycf-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'visby_cfthin';
+    src: url('../tipography/visbycf-thin-webfont.woff2') format('woff2'),
+         url('../tipography/visbycf-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'visby_cfbold';
+    src: url('../tipography/visbycf-bold-webfont.woff2') format('woff2'),
+         url('../tipography/visbycf-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'visby_cfbold';
+    src: url('../tipography/visbycf-bold-webfont.woff2') format('woff2'),
+         url('../tipography/visbycf-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'visby_cflight';
+    src: url('../tipography/visbycf-light-webfont.woff2') format('woff2'),
+         url('../tipography/visbycf-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'visby_cfregular';
+    src: url('../tipography/visbycf-regular-webfont.woff2') format('woff2'),
+         url('../tipography/visbycf-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'visby_cfthin';
+    src: url('visbycf-thin-webfont.woff2') format('woff2'),
+         url('visbycf-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.visbyRegular{
+    font-family: 'Visby CF Regular' sans-serif;
+}
+.visbyLight{
+    font-family: 'Visby CF Light';
+}
+.visbyBold{
+    font-family: 'Visby CF Bold';
+}
+.visbyExtraLight{
+    font-family: 'Visby CF ExtraLight';
+}
+.visbyMedium{
+    font-family: 'Visby CF Medium';
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background-color: $black-maog;
+    font-family: 'Visby CF';
+
+}
+
+.white{
+    background-color: $white-maog;
+}
+@mixin fullScreen {
+    height: 100vh;
+    width: 100%;
+}
+
+.container{
+    @include fullScreen();
+    background-color: $black-maog;
+
+}
+
+.header{
+    *{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__container{
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    &__logo{
+        margin: 0px 0 0 140px;
+    }
+
+    &__menu{
+        *{
+            margin: 0 0px;
+            overflow: hidden;
+        }
+        margin-right: 60px;
+    }
+}
+
+.menu{
+    &__list{
+
+        & a{
+            text-decoration: none;
+            color: $white-maog;
+            margin-right: 80px;  
+        }
+
+        & :hover{
+            color: $blue-maog;
+            cursor: pointer;
+        }
+
+        &__black{
+            & a {
+                color: $black-maog;
+                text-decoration: none;
+                margin-right: 80px;  
+            }
+            & :hover{
+                color: $blue-maog;
+                cursor: pointer;
+            }
+        }
+        
+    }
+
+
+
+}
+
+.openMenu {
+    overflow: hidden;
+    font-size: 1.8rem;
+    display: none;
+    cursor: pointer;
+}
+
+.closeMenu{
+    font-size: 1.4rem;
+    display: none;
+    cursor: pointer;
+    
+}
+
+@mixin centerBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login{
+    &__tittle {
+        text-align: center;
+        color: $white-maog;
+        font-size: 3.8em;
+        margin-top: 110px;
+    }
+
+    .inputs{
+        @include centerBox();
+        margin-top: 135px;
+
+    }
+    
+    &__inputs{
+        margin-left: 0 auto;
+        margin-right: 0 auto;
+
+        & input{
+            border: none;
+            outline: none;
+            border-bottom: 1px solid $gray-maog;
+            width: 380px;
+            height: 26px;
+            margin-bottom: 34px;
+            background-color: transparent;
+            color: $white-maog;
+            font-family: 'Visby CF';
+            font-size: 1em;
+            opacity: 0.7;
+            transition: 0.4s;
+
+            &:focus{
+                opacity: 1;
+                border-bottom: 1px solid $white-maog;
+            }
+        }
+        .inputs__name{
+            width: 170px;
+            margin-right: 35px;
+        }
+        .inputs__lastname{
+            width: 170px;
+        }
+
+    }
+
+    &__btn{
+        @include centerBox();
+        margin-top: 65px;
+
+        & a{
+            text-decoration: none;
+            text-align: center;
+            width: 380px;
+            height: 55px;
+            border-radius: 53px;
+            margin-bottom: 16px;
+            cursor: pointer;               
+        }
+        .login__confirmation{
+            background-color: $white-maog;
+            color: $black-maog;
+        }
+
+        .create__confirmation{
+            border: 1px solid $white-maog;
+            color: $white-maog;
+        }
+    }
+
+}
+
+.form{
+    &__tittle {
+        text-align: center;
+        color: $black-maog;
+        font-size: 3.8em;
+        margin-top: 110px;
+        margin-bottom: 50px;
+    }
+
+    .separator{
+        width: 890px;
+        height: 1px;
+        background-color: $gray-maog;
+        margin: auto;
+
+    }
+}
+
+.product{
+    margin-top: 100px;
+}
