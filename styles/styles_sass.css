@@ -273,5 +273,156 @@ body {
 
 .product {
   margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product .description__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product .description__left .radioBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product .description__left input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #8A8A8D;
+  width: 380px;
+  height: 26px;
+  margin-bottom: 34px;
+  background-color: transparent;
+  color: #1B171B;
+  font-family: 'Visby CF';
+  font-size: 1em;
+  opacity: 0.7;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.product .description__left input:focus {
+  opacity: 1;
+  border-bottom: 1px solid #1B171B;
+}
+
+.product .description__left .input__price {
+  width: 170px;
+  margin-right: 35px;
+}
+
+.product .description__left .input__quantity {
+  width: 170px;
+}
+
+.detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.detail .detail__close {
+  position: absolute;
+  z-index: 3;
+  left: 70px;
+  top: 50px;
+  cursor: pointer;
+}
+
+.detail__photo {
+  background-image: url("/images/t-shirt_01.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 70%;
+  height: 100vh;
+}
+
+.detail__info {
+  width: 30%;
+}
+
+.detail__info .detail__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.detail__info .detail__header object {
+  margin: 50px;
+}
+
+.detail__info .detail__header .menu__list__black {
+  list-style: none;
+  margin: auto;
+  margin-left: 300px;
+}
+
+.detail__info .detail__text {
+  width: 100%;
+  font-size: 5em;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.detail__info .detail__text h1 {
+  width: 100%;
+  margin-left: 50px;
+}
+
+.detail__info .detail__info {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 80px;
+}
+
+.detail__info .detail__info h3 {
+  font-size: 1.8em;
+  margin-left: 50px;
+}
+
+.detail__info .detail__info p {
+  margin-left: 50px;
+}
+
+.detail__info .detail__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.detail__info .detail__btn .btn__cart {
+  width: 237px;
+  height: 62px;
+  cursor: pointer;
+  background-color: #0303FC;
+  border-radius: 54px;
+  border: none;
+  outline: none;
+  font-family: 'Visby CF';
+  color: #FCFDFC;
+  font-size: 1em;
+  margin-left: 24px;
 }
 /*# sourceMappingURL=styles_sass.css.map */

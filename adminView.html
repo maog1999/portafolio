@@ -18,7 +18,7 @@
                 <div class="openMenu"><i class="fa fa-bars"></i></div>
                 <ul class="menu">
                     <li class="menu__list__black"><a href="#">Shop</a> </li>
-                    <li class="menu__list__black"><a href="#">Login</a> </li>
+                    <li class="menu__list__black"><a href="./login.html">Login</a> </li>
                     <li class="menu__list__black"><a href="#">Cart</a> </li>
                     <div class="closeMenu"><i class="fa fa-times"></i></div>
                 </ul>
@@ -34,37 +34,42 @@
         <form id="product" class="product" action="">
 
             <div class="description__left">
-                <label>
-                    <input type="radio" name="status">
-                    T-shirt
-                </label>
-                <label>
-                    <input type="radio" name="status">
-                    Hoddie
-                </label>   
-                <label>
-                    <input type="radio" name="status">
-                    Cap
-                </label>               
+                <div class="radioBtn">
+                    <label>
+                        <input type="radio" name="status">
+                        T-shirt
+                    </label>
+                    <label>
+                        <input type="radio" name="status">
+                        Hoddie
+                    </label>   
+                    <label>
+                        <input type="radio" name="status">
+                        Shorts
+                    </label>               
+                </div>
                 
-                <input placeholder="Product name" id="product__name" type="text" required> 
-                <input placeholder="Price" id="product__price" type="text" required>
-                <input placeholder="Quantity" id="product__quantity" type="text" required> 
+                <input placeholder="Product name" id="product__name" type="text" required>
+                <div class="two__inputs">
+                    <input class="input__price" placeholder="Price" id="product__price" type="text" required>
+                    <input class="input__quantity" placeholder="Quantity" id="product__quantity" type="text" required> 
+                </div>
                 <input placeholder="Description" id="product__description" type="text" required> 
 
-    
-                <label>
-                    <input type="radio" name="status">
-                    S
-                </label>
-                <label>
-                    <input type="radio" name="status">
-                    M
-                </label>   
-                <label>
-                    <input type="radio" name="status">
-                    L
-                </label>
+                <div class="radioBtn">
+                    <label>
+                        <input type="radio" name="status">
+                        S
+                    </label>
+                    <label>
+                        <input type="radio" name="status">
+                        M
+                    </label>   
+                    <label>
+                        <input type="radio" name="status">
+                        L
+                    </label>
+                </div>
             </div>
 
             <div class="description__right">
