@@ -439,3 +439,67 @@ body{
     }
 
 }
+
+//-----------My Cart-----------------------
+.cart{
+    width: 100%;
+    display: flex;
+    &__row{
+        
+       &__tittles{
+           display: flex;
+           margin-left: 145px;
+       } 
+        &__separator{
+            width: 1100px;
+            height: 1px;
+            background-color: $gray-maog;
+            margin-left: 140px;
+        }
+
+        &__second{
+            display: flex;
+            margin-left: 461px;
+
+            & p{
+                margin-right: 126px;
+            }
+        }
+
+
+    }
+
+    &__total{
+        text-align: center;
+        margin-left: 90px;
+                    
+        &__info{
+            width: 388px;
+            height: 236px;
+            background-color: transparent;
+            border: 1px solid $gray-maog;
+            border-radius: 44px;
+            text-align: center;
+            
+            & h1{
+                font-size: 3.5em;
+            }
+
+        }
+
+        &__btn{
+            margin-top: 36px;
+            width: 388px;
+            height: 62px;
+            cursor: pointer;
+            background-color: $blue-maog;
+            border-radius: 54px;
+            border: none;
+            outline: none;
+            font-family: 'Visby CF';
+            color: $white-maog;
+            font-size: 1em;
+        }
+
+    }
+}
