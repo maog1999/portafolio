@@ -1,6 +1,4 @@
 //import
-@use 'login';
-
 // Variables
 $white-maog: #FCFDFC;
 $black-maog: #1B171B;
@@ -12,7 +10,7 @@ $gray-maog: #8A8A8D;
     padding: 0;
     box-sizing: 0;
 }
-
+/*
 @font-face {
     font-family: 'visby_cflight';
     src: url('../typography/visbycf-light-webfont.woff2') format('woff2'),
@@ -98,7 +96,7 @@ $gray-maog: #8A8A8D;
 }
 .visbyMedium{
     font-family: 'Visby CF Medium';
-}
+}*/
 
 ul{
     list-style: none;
@@ -260,6 +258,19 @@ body{
             border-radius: 53px;
             margin-bottom: 16px;
             cursor: pointer;               
+        }
+        & button{
+            background-color: transparent;
+            border: none;
+            text-decoration: none;
+            text-align: center;
+            width: 380px;
+            height: 55px;
+            border-radius: 53px;
+            margin-bottom: 16px;
+            cursor: pointer;  
+            font-family: 'Visby CF';
+            font-size: 1em;           
         }
         .login__confirmation{
             background-color: $white-maog;
