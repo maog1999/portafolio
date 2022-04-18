@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "firebase": "^9.6.11"
+  },
+  "name": "portafolio",
+  "description": "��#\u0000 \u0000p\u0000o\u0000r\u0000t\u0000a\u0000f\u0000o\u0000l\u0000i\u0000o\u0000\r\u0000 \u0000",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {
+    "parcel": "^2.4.1"
+  },
+  "scripts": {
+    "dev": "parcel ./login.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maog1999/portafolio.git"
+  },
+  "author": "Miguel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maog1999/portafolio/issues"
+  },
+  "homepage": "https://github.com/maog1999/portafolio#readme"
+}

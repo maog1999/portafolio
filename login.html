@@ -29,19 +29,18 @@
     <main class="login">
         <h1 class="login__tittle visbyExtraLight">Login</h1>
         <section class="login__inputs">
-            <form id="" class="inputs" action="">
-                <input placeholder="Email" type="text" required>
-                <input placeholder="Password" type="password" required>
+            <form id="loginForm" class="inputs" action="">
+                <input placeholder="Email" type="text" required name="email">
+                <input placeholder="Password" type="password" required name="password">
             </form>
         </section>
         <div class="login__btn">
-            <a class="login__confirmation" href="#">Login</a>
-            <a class="create__confirmation" href="./register.html">Create an account</a>
+            <button id="loginFormBtn" class="login__confirmation" href="#">Login</button>
+            <button class="create__confirmation" href="./register.html">Create an account</button>
         </div>
     </main>
 
 
-
-
+    <script src="./app.js" type="module"></script>
 </body>
 </html>

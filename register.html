@@ -29,20 +29,22 @@
 <main class="login">
     <h1 class="login__tittle visbyExtraLight">Register</h1>
     <section class="login__inputs">
-        <form id="" class="inputs" action="">
+        <form id="createUserForm" class="inputs" action="">
             <div class="first__inputs">
-                <input class="inputs__name" placeholder="First name" type="text" required>
-                <input class="inputs__lastname" placeholder="Last name" type="text" required>
+                <input class="inputs__name" placeholder="First name" type="text" required name="name">
+                <input class="inputs__lastname" placeholder="Last name" type="text" required name="lastName">
             </div>
-            <input placeholder="Email" type="text" required>
-            <input placeholder="Password" type="password" required>
-            <input placeholder="Confirm password" type="password" required>
+            <input placeholder="Email" type="text" required name="email">
+            <input placeholder="Password" type="password" required name="password">
+            <input placeholder="Confirm password" type="password" required name="confirmPassword">
         </form>
     </section>
     <div class="login__btn">
-        <a class="login__confirmation" href="#">Create</a>
-        <a class="create__confirmation" href="./login.html">Back</a>
+        <button id="createUserBtn" class="login__confirmation" href="#">Create</button>
+        <button class="create__confirmation" href="./login.html">Back</button>
     </div>
 </main>
+
+    <script src="./app.js" type="module"></script>
 </body>
 </html>
