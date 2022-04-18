@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <link rel="stylesheet" href="./styles/styles_sass.css">
+
+</head>
+<body class="white">
+    <!--Header section-->
+    <header class="header">
+        <nav class="header__container">
+            <div class="header__logo">
+                <object data="./images/logo.svg" type=""></object>
+            </div>
+            <div class="header__menu">
+                <div class="openMenu"><i class="fa fa-bars"></i></div>
+                <ul class="menu">
+                    <li class="menu__list__black"><a href="#">Shop</a> </li>
+                    <li class="menu__list__black"><a href="#">Login</a> </li>
+                    <li class="menu__list__black"><a href="#">Cart</a> </li>
+                    <div class="closeMenu"><i class="fa fa-times"></i></div>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <h1 class="form__tittle visbyExtraLight">My cart</h1>
+
+    <main class="cart">
+        <div class="cart__row">
+            <div class="cart__row__tittles">
+                <div class="cart__row__first">
+                    <p>Product</p>
+                </div>
+                <div class="cart__row__second">
+                    <p>Price</p>
+                    <p>Quantity</p>
+                    <p>Total</p>
+                </div>
+            </div>
+            <div class="cart__row__separator"></div>
+        </div>
+
+        <div class="cart__total">
+            <div class="cart__total__info">
+                <p>Total payment is:</p>
+                <h1>$82.00</h1>
+            </div>
+            <button class="cart__total__btn">Go to checkout</button>
+        </div>
+    </main>
+
+</body>
+</html>
