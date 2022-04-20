@@ -479,8 +479,11 @@ body{
             background-color: transparent;
             border: 1px solid $gray-maog;
             border-radius: 44px;
+            display: flex;
+            flex-direction: column;
             text-align: center;
-            
+            justify-content: center;
+
             & h1{
                 font-size: 3.5em;
             }
@@ -501,5 +504,112 @@ body{
             font-size: 1em;
         }
 
+    }
+}
+
+//---------------RESPONSIVE--------------
+@media all and (max-width: 1060px){
+    .login{
+        &__tittle {
+        font-size: 3em;
+        margin-top: 110px;
+    }
+        &__inputs{
+            margin-top: 108px;
+        }
+        &__inputs input{
+            width: 354px;
+            height: 20px;
+        }
+
+        &__btn button{
+            width: 354px;
+            height: 52px;
+            
+        }
+
+        .inputs__name{
+            width: 144px;
+            margin-right: 60px;
+        }
+
+        .inputs__lastname{
+            width: 144px;
+
+        }
+    }
+}
+
+@media all and (max-width: 980px){
+    .login{
+        .inputs{
+            margin-top: 90px;
+        }
+        &__tittle {
+        font-size: 2.6em;
+        margin-top: 110px;
+    }
+        &__inputs{
+            margin-top: 50px;
+        }
+        &__inputs input{
+            width: 314px;
+            height: 22px;
+        }
+
+        &__btn button{
+            width: 314px;
+            height: 50px;
+            
+        }
+
+        .first__inputs{
+            display: flex;
+            flex-direction: column;
+        }
+        .inputs__name{
+            width: 314px;
+            margin-right: 0px;
+        }
+
+        .inputs__lastname{
+            width: 314px;
+
+        }
+    }
+}
+
+@media all and (max-width: 600px){
+    .login{
+        .inputs{
+            margin-top: 90px;
+        }
+        &__tittle {
+        font-size: 2.6em;
+        margin-top: 110px;
+    }
+        &__inputs{
+            margin-top: 50px;
+        }
+        &__inputs input{
+            font-size: 0.8em;
+            width: 280px;
+            height: 22px;
+        }
+
+        &__btn button{
+            font-size: 0.8em;
+            width: 280px;
+            height: 45px;
+            
+        }
+        .inputs__name{
+            width: 280px;
+        }
+
+        .inputs__lastname{
+            width: 280px;
+
+        }
     }
 }

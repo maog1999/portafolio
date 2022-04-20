@@ -493,7 +493,17 @@ body {
   background-color: transparent;
   border: 1px solid #8A8A8D;
   border-radius: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cart__total__info h1 {
@@ -512,5 +522,96 @@ body {
   font-family: 'Visby CF';
   color: #FCFDFC;
   font-size: 1em;
+}
+
+@media all and (max-width: 1060px) {
+  .login__tittle {
+    font-size: 3em;
+    margin-top: 110px;
+  }
+  .login__inputs {
+    margin-top: 108px;
+  }
+  .login__inputs input {
+    width: 354px;
+    height: 20px;
+  }
+  .login__btn button {
+    width: 354px;
+    height: 52px;
+  }
+  .login .inputs__name {
+    width: 144px;
+    margin-right: 60px;
+  }
+  .login .inputs__lastname {
+    width: 144px;
+  }
+}
+
+@media all and (max-width: 980px) {
+  .login .inputs {
+    margin-top: 90px;
+  }
+  .login__tittle {
+    font-size: 2.6em;
+    margin-top: 110px;
+  }
+  .login__inputs {
+    margin-top: 50px;
+  }
+  .login__inputs input {
+    width: 314px;
+    height: 22px;
+  }
+  .login__btn button {
+    width: 314px;
+    height: 50px;
+  }
+  .login .first__inputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .login .inputs__name {
+    width: 314px;
+    margin-right: 0px;
+  }
+  .login .inputs__lastname {
+    width: 314px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .login .inputs {
+    margin-top: 90px;
+  }
+  .login__tittle {
+    font-size: 2.6em;
+    margin-top: 110px;
+  }
+  .login__inputs {
+    margin-top: 50px;
+  }
+  .login__inputs input {
+    font-size: 0.8em;
+    width: 280px;
+    height: 22px;
+  }
+  .login__btn button {
+    font-size: 0.8em;
+    width: 280px;
+    height: 45px;
+  }
+  .login .inputs__name {
+    width: 280px;
+  }
+  .login .inputs__lastname {
+    width: 280px;
+  }
 }
 /*# sourceMappingURL=styles_sass.css.map */
