@@ -537,7 +537,7 @@ const createUserForm = document.getElementById("createUserForm");
 const createUserBtn = document.getElementById("createUserBtn");
 const loginForm = document.getElementById("loginForm");
 const loginFormBtn = document.getElementById("loginFormBtn");
-createUserBtn.addEventListener("click", async (e)=>{
+if (createUserBtn) createUserBtn.addEventListener("click", async (e)=>{
     e.preventDefault();
     const name = createUserForm.name.value;
     const lastName = createUserForm.lastName.value;
@@ -559,22 +559,19 @@ createUserBtn.addEventListener("click", async (e)=>{
         console.log(userCreated);
     }
     if (password !== confirmPassword) alert("Las contraseñas no coinciden");
-}); //¡¡¡¡¡¡PREGUNTAR ESTO MAÑANA!!!!!!!!!!!!!!!!!!
- /*loginFormBtn.addEventListener("click", e =>{
+});
+//¡¡¡¡¡¡PREGUNTAR ESTO MAÑANA!!!!!!!!!!!!!!!!!!
+if (loginFormBtn) loginFormBtn.addEventListener("click", async (e)=>{
     e.preventDefault();
-
     console.log("entro");
     const email = loginForm.email.value;
     const password = loginForm.password.value;
-    login(auth, email, password);
-
-    if(user.isAdmin){
-        location.href = "./adminView.html"
-    }else{
-        location.href = "./mycart.html"
-
-    }
-});*/  //---------------------------------
+    const user = await _auth1.login(auth, db, email, password);
+    console.log(user);
+    if (user.isAdmin) location.href = "./adminView.html";
+    else location.href = "./mycart.html";
+});
+ //---------------------------------
  /*
 const user = {
     name: "",
@@ -33272,10 +33269,14 @@ parcelHelpers.export(exports, "addUserToDatabase", ()=>addUserToDatabase
 var _auth = require("firebase/auth");
 var _firestore = require("firebase/firestore");
 //Función login
-async function login(auth, email, password) {
+async function login(auth, db, email, password) {
     try {
         const { user  } = await _auth.signInWithEmailAndPassword(auth, email, password);
         alert(`Bienvenido, usuario ${user.email}`);
+        const docRef = _firestore.doc(db, "users", user.uid);
+        const docSnap = await _firestore.getDoc(docRef);
+        const data = docSnap.data();
+        return data;
     } catch (e) {
         console.log(e);
         alert("Correo o contraseña inválida :(");

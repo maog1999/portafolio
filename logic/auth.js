@@ -1,12 +1,17 @@
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, setDoc, getDoc } from "firebase/firestore";
 
 
 //Función login
-async function login (auth, email, password){
+async function login (auth, db, email, password){
     try{
         const { user } = await signInWithEmailAndPassword(auth, email, password);
         alert(`Bienvenido, usuario ${user.email}`);
+
+        const docRef = doc(db, "users", user.uid);
+        const docSnap = await getDoc(docRef);
+        const data = docSnap.data();
+        return data;
 
     }catch(e){
         console.log(e);
