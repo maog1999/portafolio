@@ -23,11 +23,11 @@
     font-family: 'Visby CF ExtraLight';
     src: url('../typography/VisbyCF-Thin.otf');
 }
-
+/*
 @font-face {
     font-family: 'Visby CF Medium';
     src: url('../typography/VisbyCF-Medium.otf;');
-}
+}*/
 
 .visbyRegular{
     font-family: 'Visby CF Regular';
@@ -40,10 +40,10 @@
 }
 .visbyExtraLight{
     font-family: 'Visby CF ExtraLight';
-}
+}/*
 .visbyMedium{
     font-family: 'Visby CF Medium';
-}
+}*/
 ul{
     list-style: none;
 }

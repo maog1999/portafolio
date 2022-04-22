@@ -1,10 +1,11 @@
 // Import the functions you need from the SDKs you need
 import { async } from "@firebase/util";
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-// Your web app's Firebase configuration
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+
+import { login, createUser, addUserToDatabase } from "./auth";
+
 const firebaseConfig = {
   apiKey: "AIzaSyDeo9EJqc6RI1v4uEhfMgTFF7M0UBYd7tg",
   authDomain: "maog-shop.firebaseapp.com",
@@ -17,6 +18,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
+const db = getFirestore(app);
 
 //Logica para iniciar/registro de sesión
 const createUserForm = document.getElementById("createUserForm");
@@ -24,7 +26,7 @@ const createUserBtn = document.getElementById("createUserBtn");
 const loginForm = document.getElementById("loginForm");
 const loginFormBtn = document.getElementById("loginFormBtn");
 
-createUserBtn.addEventListener("click", e =>{
+createUserBtn.addEventListener("click", async e =>{
     e.preventDefault();
 
     const name = createUserForm.name.value;
@@ -32,53 +34,46 @@ createUserBtn.addEventListener("click", e =>{
     const email = createUserForm.email.value;
     const password = createUserForm.password.value;
     const confirmPassword = createUserForm.confirmPassword.value;
-    createUser(name, email, password);
-    console.log("creando user");
-});
+    const newUser = {
+        name,
+        lastName,
+        email,
+        password,
+        isAdmin : false
+    }
+    if(name !== "" && lastName !== "" && email !== "" && password !== "" && confirmPassword !== "" && password == confirmPassword){
+        const userCreated = await createUser(auth, newUser);
+        await addUserToDatabase(db, userCreated.uid, newUser);
+    
+        alert(`Bienvenido, ${ name }`);
+        console.log("creando user");
+        console.log(userCreated);
 
-loginFormBtn.addEventListener("click", e =>{
+    }if(password !== confirmPassword){
+        alert("Las contraseñas no coinciden");
+    }
+});
+//¡¡¡¡¡¡PREGUNTAR ESTO MAÑANA!!!!!!!!!!!!!!!!!!
+/*loginFormBtn.addEventListener("click", e =>{
     e.preventDefault();
 
     console.log("entro");
     const email = loginForm.email.value;
     const password = loginForm.password.value;
-    login(email, password);
-});
+    login(auth, email, password);
+
+    if(user.isAdmin){
+        location.href = "./adminView.html"
+    }else{
+        location.href = "./mycart.html"
+
+    }
+});*/
+
+
+
 
 //---------------------------------
-//Función login
-async function login (email, password){
-    try{
-        const { user } = await signInWithEmailAndPassword(auth, email, password);
-        alert(`Bienvenido, usuario ${user.email}`);
-
-    }catch(e){
-        console.log(e);
-        alert("Correo o contraseña inválida :(");
-    }
-}
-
-//---------------------------------
-//Funcion registrar usuarios
-async function createUser(name, email, password){
-    try{
-        const { user } = await createUserWithEmailAndPassword(auth, email, password);
-        alert(`Bienvenido, ${user.email}`);
-        console.log(user);
-    }catch(e){
-        if(e.code === "auth/weak-password") {
-            alert("Tu contraseña debe tener al menos 6 caracteres");
-        }
-    
-        if(e.code === "auth/email-already-in-use") {
-            alert("Este correo ya se encuentra en uso");
-        }
-    }
-
-}
-
-
-
 /*
 const user = {
     name: "",
