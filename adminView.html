@@ -31,12 +31,12 @@
         <h1 class="form__tittle visbyExtraLight">Add products</h1>
         <div class="separator"></div>
 
-        <form id="product" class="product" action="">
+        <form id="productForm" class="product" action="">
 
             <div class="description__left">
                 <div class="radioBtn">
                     <label>
-                        <input type="radio" name="status">
+                        <input  type="radio" name="status">
                         T-shirt
                     </label>
                     <label>
@@ -49,12 +49,12 @@
                     </label>               
                 </div>
                 
-                <input placeholder="Product name" id="product__name" type="text" required>
+                <input class="info" placeholder="Product name" id="product__name" type="text" name="name">
                 <div class="two__inputs">
-                    <input class="input__price" placeholder="Price" id="product__price" type="text" required>
-                    <input class="input__quantity" placeholder="Quantity" id="product__quantity" type="text" required> 
+                    <input class="info input__price" placeholder="Price" id="product__price" type="text" name="price">
+                    <input class="info input__quantity" placeholder="Quantity" id="product__quantity" type="text" name="quantity"> 
                 </div>
-                <input placeholder="Description" id="product__description" type="text" required> 
+                <input class="info" placeholder="Description" id="product__description" type="text" name="description"> 
 
                 <div class="radioBtn">
                     <label>
@@ -73,9 +73,9 @@
             </div>
 
             <div class="description__right">
-                <input id="product__image" type="file" accept=".png,.jpg,.jpeg" required>
+                    <input id="product__image" type="file" accept=".png,.jpg,.jpeg" multiple name="images">
             </div>
-
+                
             <input id="product__submit" type="submit" value="Cargar">
 
             
@@ -83,6 +83,6 @@
 
     </main>
 
-    <script src="./logic/admin.js"></script>
+    <script src="./logic/createProducts.js" type="module"></script>
 </body>
 </html>

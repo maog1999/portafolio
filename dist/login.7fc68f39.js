@@ -514,22 +514,17 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"gafa0":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 // Import the functions you need from the SDKs you need
 var _util = require("@firebase/util");
 var _app = require("firebase/app");
 var _auth = require("firebase/auth");
 var _firestore = require("firebase/firestore");
 var _auth1 = require("./auth");
-const firebaseConfig = {
-    apiKey: "AIzaSyDeo9EJqc6RI1v4uEhfMgTFF7M0UBYd7tg",
-    authDomain: "maog-shop.firebaseapp.com",
-    projectId: "maog-shop",
-    storageBucket: "maog-shop.appspot.com",
-    messagingSenderId: "948192743979",
-    appId: "1:948192743979:web:d72038644bfcd3b81e506e"
-};
+var _firebase = require("./firebase");
+var _firebaseDefault = parcelHelpers.interopDefault(_firebase);
 // Initialize Firebase
-const app = _app.initializeApp(firebaseConfig);
+const app = _app.initializeApp(_firebaseDefault.default);
 const auth = _auth.getAuth();
 const db = _firestore.getFirestore(app);
 //Logica para iniciar/registro de sesión
@@ -560,7 +555,6 @@ if (createUserBtn) createUserBtn.addEventListener("click", async (e)=>{
     }
     if (password !== confirmPassword) alert("Las contraseñas no coinciden");
 });
-//¡¡¡¡¡¡PREGUNTAR ESTO MAÑANA!!!!!!!!!!!!!!!!!!
 if (loginFormBtn) loginFormBtn.addEventListener("click", async (e)=>{
     e.preventDefault();
     console.log("entro");
@@ -663,7 +657,7 @@ products.forEach( product => {
     divInventory.appendChild(productsDiv);
 });*/ 
 
-},{"@firebase/util":"ePiK6","firebase/app":"5wGMN","firebase/auth":"drt1f","firebase/firestore":"cJafS","./auth":"4S0cj"}],"ePiK6":[function(require,module,exports) {
+},{"@firebase/util":"ePiK6","firebase/app":"5wGMN","firebase/auth":"drt1f","firebase/firestore":"cJafS","./auth":"4S0cj","./firebase":"1bMjp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ePiK6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CONSTANTS", ()=>CONSTANTS
@@ -33302,6 +33296,19 @@ async function addUserToDatabase(db, userId, userInfo) {
     }
 }
 
-},{"firebase/auth":"drt1f","firebase/firestore":"cJafS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["7UUiF","gafa0"], "gafa0", "parcelRequireb12e")
+},{"firebase/auth":"drt1f","firebase/firestore":"cJafS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1bMjp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const firebaseConfig = {
+    apiKey: "AIzaSyDeo9EJqc6RI1v4uEhfMgTFF7M0UBYd7tg",
+    authDomain: "maog-shop.firebaseapp.com",
+    projectId: "maog-shop",
+    storageBucket: "maog-shop.appspot.com",
+    messagingSenderId: "948192743979",
+    appId: "1:948192743979:web:d72038644bfcd3b81e506e"
+};
+exports.default = firebaseConfig;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["7UUiF","gafa0"], "gafa0", "parcelRequireb12e")
 
 //# sourceMappingURL=login.7fc68f39.js.map
