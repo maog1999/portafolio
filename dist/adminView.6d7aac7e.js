@@ -552,7 +552,7 @@ productForm.addEventListener("submit", async (e)=>{
     await _addProducts.addProduct(db, newProduct);
 });
 
-},{"firebase/app":"5wGMN","firebase/firestore":"cJafS","./firebase":"1bMjp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./addProducts":"ezFej","firebase/storage":"9dDUH"}],"5wGMN":[function(require,module,exports) {
+},{"firebase/app":"5wGMN","firebase/firestore":"cJafS","./firebase":"1bMjp","./addProducts":"ezFej","firebase/storage":"9dDUH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5wGMN":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _app = require("@firebase/app");
@@ -24150,7 +24150,7 @@ async function uploadImages(storage, images = []) {
     return uploadedImages;
 }
 
-},{"firebase/firestore":"cJafS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","firebase/storage":"9dDUH"}],"9dDUH":[function(require,module,exports) {
+},{"firebase/firestore":"cJafS","firebase/storage":"9dDUH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9dDUH":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _storage = require("@firebase/storage");
