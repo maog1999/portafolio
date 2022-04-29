@@ -516,14 +516,37 @@ function hmrAcceptRun(bundle, id) {
 },{}],"gafa0":[function(require,module,exports) {
 // Import the functions you need from the SDKs you need
 var _util = require("@firebase/util");
+<<<<<<< HEAD
 var _auth = require("./auth");
 var _importFirebase = require("./importFirebase");
+=======
+var _app = require("firebase/app");
+var _auth = require("firebase/auth");
+var _firestore = require("firebase/firestore");
+var _auth1 = require("./auth");
+const firebaseConfig = {
+    apiKey: "AIzaSyDeo9EJqc6RI1v4uEhfMgTFF7M0UBYd7tg",
+    authDomain: "maog-shop.firebaseapp.com",
+    projectId: "maog-shop",
+    storageBucket: "maog-shop.appspot.com",
+    messagingSenderId: "948192743979",
+    appId: "1:948192743979:web:d72038644bfcd3b81e506e"
+};
+// Initialize Firebase
+const app = _app.initializeApp(firebaseConfig);
+const auth = _auth.getAuth();
+const db = _firestore.getFirestore(app);
+>>>>>>> 44a33d5ecfc28293c41f26001eca2a3973acea48
 //Logica para iniciar/registro de sesión
 const createUserForm = document.getElementById("createUserForm");
 const createUserBtn = document.getElementById("createUserBtn");
 const loginForm = document.getElementById("loginForm");
 const loginFormBtn = document.getElementById("loginFormBtn");
+<<<<<<< HEAD
 if (createUserBtn) createUserBtn.addEventListener("click", async (e)=>{
+=======
+createUserBtn.addEventListener("click", async (e)=>{
+>>>>>>> 44a33d5ecfc28293c41f26001eca2a3973acea48
     e.preventDefault();
     const name = createUserForm.name.value;
     const lastName = createUserForm.lastName.value;
@@ -538,13 +561,19 @@ if (createUserBtn) createUserBtn.addEventListener("click", async (e)=>{
         isAdmin: false
     };
     if (name !== "" && lastName !== "" && email !== "" && password !== "" && confirmPassword !== "" && password == confirmPassword) {
+<<<<<<< HEAD
         const userCreated = await _auth.createUser(_importFirebase.auth, newUser);
         await _auth.addUserToDatabase(_importFirebase.db, userCreated.uid, newUser);
+=======
+        const userCreated = await _auth1.createUser(auth, newUser);
+        await _auth1.addUserToDatabase(db, userCreated.uid, newUser);
+>>>>>>> 44a33d5ecfc28293c41f26001eca2a3973acea48
         alert(`Bienvenido, ${name}`);
         console.log("creando user");
         console.log(userCreated);
     }
     if (password !== confirmPassword) alert("Las contraseñas no coinciden");
+<<<<<<< HEAD
 });
 if (loginFormBtn) loginFormBtn.addEventListener("click", async (e)=>{
     e.preventDefault();
@@ -557,6 +586,24 @@ if (loginFormBtn) loginFormBtn.addEventListener("click", async (e)=>{
     else location.href = "./mycart.html";
 });
  //---------------------------------
+=======
+}); //¡¡¡¡¡¡PREGUNTAR ESTO MAÑANA!!!!!!!!!!!!!!!!!!
+ /*loginFormBtn.addEventListener("click", e =>{
+    e.preventDefault();
+
+    console.log("entro");
+    const email = loginForm.email.value;
+    const password = loginForm.password.value;
+    login(auth, email, password);
+
+    if(user.isAdmin){
+        location.href = "./adminView.html"
+    }else{
+        location.href = "./mycart.html"
+
+    }
+});*/  //---------------------------------
+>>>>>>> 44a33d5ecfc28293c41f26001eca2a3973acea48
  /*
 const user = {
     name: "",
@@ -648,7 +695,11 @@ products.forEach( product => {
     divInventory.appendChild(productsDiv);
 });*/ 
 
+<<<<<<< HEAD
 },{"@firebase/util":"ePiK6","./auth":"4S0cj","./importFirebase":"dYV9L"}],"ePiK6":[function(require,module,exports) {
+=======
+},{"@firebase/util":"ePiK6","firebase/app":"5wGMN","firebase/auth":"drt1f","firebase/firestore":"cJafS","./auth":"4S0cj"}],"ePiK6":[function(require,module,exports) {
+>>>>>>> 44a33d5ecfc28293c41f26001eca2a3973acea48
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CONSTANTS", ()=>CONSTANTS
@@ -2473,6 +2524,7 @@ exports.export = function(dest, destName, get) {
     });
 };
 
+<<<<<<< HEAD
 },{}],"4S0cj":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -2691,6 +2743,33 @@ var _component = require("@firebase/component");
 var _index7078A255Js = require("./index-7078a255.js");
 
 },{"@firebase/util":"ePiK6","@firebase/app":"3AcPV","tslib":"lRdW5","@firebase/logger":"fZmft","@firebase/component":"bi1VB","./index-7078a255.js":"eExx3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3AcPV":[function(require,module,exports) {
+=======
+},{}],"5wGMN":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _app = require("@firebase/app");
+parcelHelpers.exportAll(_app, exports);
+var name = "firebase";
+var version = "9.6.11";
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */ _app.registerVersion(name, version, 'app');
+
+},{"@firebase/app":"3AcPV","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3AcPV":[function(require,module,exports) {
+>>>>>>> 44a33d5ecfc28293c41f26001eca2a3973acea48
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "FirebaseError", ()=>_util.FirebaseError
@@ -4058,7 +4137,183 @@ function setUserLogHandler(logCallback, options) {
     }
 }
 
+<<<<<<< HEAD
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lRdW5":[function(require,module,exports) {
+=======
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"drt1f":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _auth = require("@firebase/auth");
+parcelHelpers.exportAll(_auth, exports);
+
+},{"@firebase/auth":"khbwD","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"khbwD":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ActionCodeOperation", ()=>_index7078A255Js.A
+);
+parcelHelpers.export(exports, "ActionCodeURL", ()=>_index7078A255Js.ac
+);
+parcelHelpers.export(exports, "AuthCredential", ()=>_index7078A255Js.G
+);
+parcelHelpers.export(exports, "AuthErrorCodes", ()=>_index7078A255Js.C
+);
+parcelHelpers.export(exports, "EmailAuthCredential", ()=>_index7078A255Js.H
+);
+parcelHelpers.export(exports, "EmailAuthProvider", ()=>_index7078A255Js.L
+);
+parcelHelpers.export(exports, "FacebookAuthProvider", ()=>_index7078A255Js.M
+);
+parcelHelpers.export(exports, "FactorId", ()=>_index7078A255Js.F
+);
+parcelHelpers.export(exports, "GithubAuthProvider", ()=>_index7078A255Js.Q
+);
+parcelHelpers.export(exports, "GoogleAuthProvider", ()=>_index7078A255Js.N
+);
+parcelHelpers.export(exports, "OAuthCredential", ()=>_index7078A255Js.I
+);
+parcelHelpers.export(exports, "OAuthProvider", ()=>_index7078A255Js.T
+);
+parcelHelpers.export(exports, "OperationType", ()=>_index7078A255Js.O
+);
+parcelHelpers.export(exports, "PhoneAuthCredential", ()=>_index7078A255Js.J
+);
+parcelHelpers.export(exports, "PhoneAuthProvider", ()=>_index7078A255Js.P
+);
+parcelHelpers.export(exports, "PhoneMultiFactorGenerator", ()=>_index7078A255Js.m
+);
+parcelHelpers.export(exports, "ProviderId", ()=>_index7078A255Js.o
+);
+parcelHelpers.export(exports, "RecaptchaVerifier", ()=>_index7078A255Js.R
+);
+parcelHelpers.export(exports, "SAMLAuthProvider", ()=>_index7078A255Js.U
+);
+parcelHelpers.export(exports, "SignInMethod", ()=>_index7078A255Js.S
+);
+parcelHelpers.export(exports, "TwitterAuthProvider", ()=>_index7078A255Js.V
+);
+parcelHelpers.export(exports, "applyActionCode", ()=>_index7078A255Js.a1
+);
+parcelHelpers.export(exports, "browserLocalPersistence", ()=>_index7078A255Js.b
+);
+parcelHelpers.export(exports, "browserPopupRedirectResolver", ()=>_index7078A255Js.k
+);
+parcelHelpers.export(exports, "browserSessionPersistence", ()=>_index7078A255Js.a
+);
+parcelHelpers.export(exports, "checkActionCode", ()=>_index7078A255Js.a2
+);
+parcelHelpers.export(exports, "confirmPasswordReset", ()=>_index7078A255Js.a0
+);
+parcelHelpers.export(exports, "connectAuthEmulator", ()=>_index7078A255Js.E
+);
+parcelHelpers.export(exports, "createUserWithEmailAndPassword", ()=>_index7078A255Js.a4
+);
+parcelHelpers.export(exports, "debugErrorMap", ()=>_index7078A255Js.z
+);
+parcelHelpers.export(exports, "deleteUser", ()=>_index7078A255Js.y
+);
+parcelHelpers.export(exports, "fetchSignInMethodsForEmail", ()=>_index7078A255Js.a9
+);
+parcelHelpers.export(exports, "getAdditionalUserInfo", ()=>_index7078A255Js.ak
+);
+parcelHelpers.export(exports, "getAuth", ()=>_index7078A255Js.n
+);
+parcelHelpers.export(exports, "getIdToken", ()=>_index7078A255Js.ah
+);
+parcelHelpers.export(exports, "getIdTokenResult", ()=>_index7078A255Js.ai
+);
+parcelHelpers.export(exports, "getMultiFactorResolver", ()=>_index7078A255Js.am
+);
+parcelHelpers.export(exports, "getRedirectResult", ()=>_index7078A255Js.j
+);
+parcelHelpers.export(exports, "inMemoryPersistence", ()=>_index7078A255Js.K
+);
+parcelHelpers.export(exports, "indexedDBLocalPersistence", ()=>_index7078A255Js.i
+);
+parcelHelpers.export(exports, "initializeAuth", ()=>_index7078A255Js.D
+);
+parcelHelpers.export(exports, "isSignInWithEmailLink", ()=>_index7078A255Js.a7
+);
+parcelHelpers.export(exports, "linkWithCredential", ()=>_index7078A255Js.Y
+);
+parcelHelpers.export(exports, "linkWithPhoneNumber", ()=>_index7078A255Js.l
+);
+parcelHelpers.export(exports, "linkWithPopup", ()=>_index7078A255Js.d
+);
+parcelHelpers.export(exports, "linkWithRedirect", ()=>_index7078A255Js.g
+);
+parcelHelpers.export(exports, "multiFactor", ()=>_index7078A255Js.an
+);
+parcelHelpers.export(exports, "onAuthStateChanged", ()=>_index7078A255Js.t
+);
+parcelHelpers.export(exports, "onIdTokenChanged", ()=>_index7078A255Js.q
+);
+parcelHelpers.export(exports, "parseActionCodeURL", ()=>_index7078A255Js.ad
+);
+parcelHelpers.export(exports, "prodErrorMap", ()=>_index7078A255Js.B
+);
+parcelHelpers.export(exports, "reauthenticateWithCredential", ()=>_index7078A255Js.Z
+);
+parcelHelpers.export(exports, "reauthenticateWithPhoneNumber", ()=>_index7078A255Js.r
+);
+parcelHelpers.export(exports, "reauthenticateWithPopup", ()=>_index7078A255Js.e
+);
+parcelHelpers.export(exports, "reauthenticateWithRedirect", ()=>_index7078A255Js.h
+);
+parcelHelpers.export(exports, "reload", ()=>_index7078A255Js.al
+);
+parcelHelpers.export(exports, "sendEmailVerification", ()=>_index7078A255Js.aa
+);
+parcelHelpers.export(exports, "sendPasswordResetEmail", ()=>_index7078A255Js.$
+);
+parcelHelpers.export(exports, "sendSignInLinkToEmail", ()=>_index7078A255Js.a6
+);
+parcelHelpers.export(exports, "setPersistence", ()=>_index7078A255Js.p
+);
+parcelHelpers.export(exports, "signInAnonymously", ()=>_index7078A255Js.W
+);
+parcelHelpers.export(exports, "signInWithCredential", ()=>_index7078A255Js.X
+);
+parcelHelpers.export(exports, "signInWithCustomToken", ()=>_index7078A255Js._
+);
+parcelHelpers.export(exports, "signInWithEmailAndPassword", ()=>_index7078A255Js.a5
+);
+parcelHelpers.export(exports, "signInWithEmailLink", ()=>_index7078A255Js.a8
+);
+parcelHelpers.export(exports, "signInWithPhoneNumber", ()=>_index7078A255Js.s
+);
+parcelHelpers.export(exports, "signInWithPopup", ()=>_index7078A255Js.c
+);
+parcelHelpers.export(exports, "signInWithRedirect", ()=>_index7078A255Js.f
+);
+parcelHelpers.export(exports, "signOut", ()=>_index7078A255Js.x
+);
+parcelHelpers.export(exports, "unlink", ()=>_index7078A255Js.aj
+);
+parcelHelpers.export(exports, "updateCurrentUser", ()=>_index7078A255Js.w
+);
+parcelHelpers.export(exports, "updateEmail", ()=>_index7078A255Js.af
+);
+parcelHelpers.export(exports, "updatePassword", ()=>_index7078A255Js.ag
+);
+parcelHelpers.export(exports, "updatePhoneNumber", ()=>_index7078A255Js.u
+);
+parcelHelpers.export(exports, "updateProfile", ()=>_index7078A255Js.ae
+);
+parcelHelpers.export(exports, "useDeviceLanguage", ()=>_index7078A255Js.v
+);
+parcelHelpers.export(exports, "verifyBeforeUpdateEmail", ()=>_index7078A255Js.ab
+);
+parcelHelpers.export(exports, "verifyPasswordResetCode", ()=>_index7078A255Js.a3
+);
+var _util = require("@firebase/util");
+var _app = require("@firebase/app");
+var _tslib = require("tslib");
+var _logger = require("@firebase/logger");
+var _component = require("@firebase/component");
+var _index7078A255Js = require("./index-7078a255.js");
+
+},{"@firebase/util":"ePiK6","@firebase/app":"3AcPV","tslib":"lRdW5","@firebase/logger":"fZmft","@firebase/component":"bi1VB","./index-7078a255.js":"eExx3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lRdW5":[function(require,module,exports) {
+>>>>>>> 44a33d5ecfc28293c41f26001eca2a3973acea48
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "__extends", ()=>__extends
