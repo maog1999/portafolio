@@ -397,4 +397,56 @@ body {
   font-size: 1em;
 }
 
+.shop__tittle {
+  text-align: center;
+  color: #1b171b;
+  margin-top: 110px;
+  font-size: 3.8em;
+}
+
+.shop__separator {
+  width: 1573px;
+  height: 1px;
+  background-color: #8a8a8d;
+  margin-left: 140px;
+}
+
+.shop__filters {
+  margin-bottom: 20px;
+  margin-left: 150px;
+}
+
+.shop__filters button {
+  all: unset;
+  cursor: pointer;
+  margin-right: 54px;
+}
+
+.shop .products {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.shop .product {
+  width: 456px;
+  height: 540px;
+  display: block;
+  position: relative;
+}
+
+.shop .product__image {
+  width: 100%;
+  height: 100%;
+}
+
+.shop .product__info {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+}
+
+.shop .product__info p {
+  color: #fcfdfc;
+}
+
 /*# sourceMappingURL=adminView.d1b37253.css.map */

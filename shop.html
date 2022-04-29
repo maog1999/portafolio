@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="./styles/styles_sass.css">
+    <link rel="stylesheet" href="./styles/mediaqueries.scss">
+</head>
+<body class="white">
+    <!--Header section-->
+    <header class="header">
+        <nav class="header__container">
+            <div class="header__logo">
+                <object data="./images/logo.svg" type=""></object>
+            </div>
+            <div class="header__menu">
+                <div class="openMenu"><i class="fa fa-bars"></i></div>
+                <ul class="menu">
+                    <li class="menu__list__black"><a href="#">Shop</a> </li>
+                    <li class="menu__list__black"><a href="./login.html">Login</a> </li>
+                    <li class="menu__list__black"><a href="#">Cart</a> </li>
+                    <div class="closeMenu"><i class="fa fa-times"></i></div>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="shop">
+        <h1 class="shop__tittle visbyExtraLight">Shop</h1>
+        <div class="shop__filters">
+            <button id="allFilter">All</button>
+            <button id="tshirtsFilter">T-shirts</button>
+            <button>Hoodies</button>
+            <button>Caps</button>
+        </div>
+        <div>
+            <label for="sort">Sort price by</label>
+            <select name="sort" id="sort">
+                <option value="">def</option>
+                <option value="asc">asc</option>
+                <option value="dsc">desc</option>
+               
+            </select>
+        </div>
+        <div class="shop__separator"></div>
+
+        <section id="products" class="products"></section>
+    </main>
+
+    <script src="./logic/shop.js" type="module"></script>
+</body>
+</html>

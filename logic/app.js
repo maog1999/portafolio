@@ -1,16 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { async } from "@firebase/util";
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
 
 import { login, createUser, addUserToDatabase } from "./auth";
-import firebaseConfig from "./firebase";
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth();
-const db = getFirestore(app);
+import { db, auth} from "./importFirebase";
 
 //Logica para iniciar/registro de sesión
 const createUserForm = document.getElementById("createUserForm");
