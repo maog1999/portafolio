@@ -8,10 +8,12 @@ productForm.addEventListener("submit", async (e) =>{
     e.preventDefault();
     console.log("funciono");
 
+    const category = productForm.category.value;
     const name = productForm.name.value;
     const price = productForm.price.value;
     const quantity = productForm.quantity.value;
     const description = productForm.description.value;
+    const size = productForm.size.value;
     const images = productForm.images.files;
 
     let gallery = [];
@@ -25,10 +27,12 @@ productForm.addEventListener("submit", async (e) =>{
     }
 
     const newProduct = {
+        category,
         name,
         price,
         quantity,
         description,
+        size,
         images: gallery,
     }
 

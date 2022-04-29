@@ -521,10 +521,12 @@ const productForm = document.getElementById("productForm");
 productForm.addEventListener("submit", async (e)=>{
     e.preventDefault();
     console.log("funciono");
+    const category = productForm.category.value;
     const name = productForm.name.value;
     const price = productForm.price.value;
     const quantity = productForm.quantity.value;
     const description = productForm.description.value;
+    const size = productForm.size.value;
     const images = productForm.images.files;
     let gallery = [];
     if (images.length) {
@@ -534,10 +536,12 @@ productForm.addEventListener("submit", async (e)=>{
         gallery = await Promise.all(uploadedImages);
     }
     const newProduct = {
+        category,
         name,
         price,
         quantity,
         description,
+        size,
         images: gallery
     };
     await _addProducts.addProduct(_importFirebase.db, newProduct);

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin View</title>
     <link rel="stylesheet" href="/adminView.d1b37253.css">
-    <link rel="stylesheet" href="/login.6d6c5137.css">
+    <link rel="stylesheet" href="/adminView.6d6c5137.css">
 </head>
 <body class="white">
     <!--Header section-->
@@ -36,18 +36,12 @@
 
             <div class="description__left">
                 <div class="radioBtn">
-                    <label>
-                        <input type="radio" name="status">
-                        T-shirt
-                    </label>
-                    <label>
-                        <input type="radio" name="status">
-                        Hoddie
-                    </label>   
-                    <label>
-                        <input type="radio" name="status">
-                        Shorts
-                    </label>               
+                    <label for="category">Category</label>
+                    <select name="category" id="category">
+                        <option value="T-shirt">T-shirt</option>
+                        <option value="Hoodie">Hoodie</option>
+                        <option value="Cap">Cap</option>
+                    </select>               
                 </div>
                 
                 <input class="info" placeholder="Product name" id="product__name" type="text" name="name">
@@ -58,18 +52,12 @@
                 <input class="info" placeholder="Description" id="product__description" type="text" name="description"> 
 
                 <div class="radioBtn">
-                    <label>
-                        <input type="radio" name="status2">
-                        S
-                    </label>
-                    <label>
-                        <input type="radio" name="status2">
-                        M
-                    </label>   
-                    <label>
-                        <input type="radio" name="status2">
-                        L
-                    </label>
+                    <label for="size">Size</label>
+                    <select name="size" id="size">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
                 </div>
             </div>
 

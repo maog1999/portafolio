@@ -9,12 +9,32 @@ const sort = document.getElementById("sort");
 
 let products = [];
 
+function getCategory(){
+    const url = window.location.search;
+    const searchParams = new URLSearchParams(url);
+    return searchParams.get("category");
+}
+
 async function loadProducts(){
+
+    const category = getCategory();
+    console.log(category);
+
     const firebaseProducts = await getProducts(db);
-    firebaseProducts.forEach(product => {
+    let filteredProducts = [];
+
+    if (category=== "All" || category === null) {
+        filteredProducts = firebaseProducts;
+    } else {
+        filteredProducts = firebaseProducts.filter((product) => product.category === category);
+        filterByTshirt();
+    }
+
+
+    filteredProducts.forEach(product => {
         renderProducts(product);
     });
-    products = firebaseProducts;
+    products = filteredProducts;
 }
 
 function renderProducts(item){
@@ -38,27 +58,24 @@ function renderProducts(item){
 }
 
 function filterByTshirt(){
-    const shirtFilter = "T-shirt";
     const priceOrder = sort.value;
-
-    let filteredProducts = [];
-    filteredProducts = products.filter((product) => product.description === shirtFilter);
  
+    let sortedProducts = [];
     if(priceOrder === "asc"){
-        filteredProducts = filteredProducts.sort((a, b) => 
+        sortedProducts = products.sort((a, b) => 
             b.price - a.price);
     }
 
     if(priceOrder === "dsc"){
-        filteredProducts = filteredProducts.sort((a, b) => 
+        sortedProducts = products.sort((a, b) => 
             a.price - b.price);
     }
 
     productSection.innerHTML = "";
-    filteredProducts.forEach(product => {
+    sortedProducts.forEach(product => {
         renderProducts(product);
     });
-    console.log(filteredProducts);
+    console.log(sortedProducts);
 }
 
 tshirtsFilter.addEventListener("click", e => {
@@ -67,8 +84,7 @@ tshirtsFilter.addEventListener("click", e => {
 
 async function filterByAll(){
     productSection.innerHTML = "";
-    const firebaseProducts = await getProducts(db);
-    firebaseProducts.forEach(product => {
+    products.forEach(product => {
         renderProducts(product);
     });
 }
