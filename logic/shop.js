@@ -5,6 +5,9 @@ import { getProducts } from "./products";
 const productSection = document.getElementById("products");
 const tshirtsFilter = document.getElementById("tshirtsFilter");
 const allFilter = document.getElementById("allFilter");
+const hoodiesFilter = document.getElementById("hoodiesFilter");
+const capFilter = document.getElementById("capFilter");
+
 const sort = document.getElementById("sort");
 
 let products = [];
@@ -15,21 +18,30 @@ function getCategory(){
     return searchParams.get("category");
 }
 
+function getSize(){
+    const url = window.location.search;
+    const searchParams = new URLSearchParams(url);
+    return searchParams.get("size");
+}
+
 async function loadProducts(){
 
     const category = getCategory();
-    console.log(category);
+    const size = getSize();
 
     const firebaseProducts = await getProducts(db);
     let filteredProducts = [];
 
     if (category=== "All" || category === null) {
         filteredProducts = firebaseProducts;
-    } else {
+
+    }else {
         filteredProducts = firebaseProducts.filter((product) => product.category === category);
-        filterByTshirt();
     }
 
+    if(size === "S"){
+        filteredProducts = firebaseProducts.filter((product) => product.size === size);        
+    }
 
     filteredProducts.forEach(product => {
         renderProducts(product);
@@ -78,8 +90,17 @@ function filterByTshirt(){
     console.log(sortedProducts);
 }
 
+function filterBySize(){
+    const priceOrder = sort.value;
+
+    if(priceOrder==="S"){
+        alert("hola");
+    }
+}
+
+
 tshirtsFilter.addEventListener("click", e => {
-    filterByTshirt();
+
 });
 
 async function filterByAll(){
@@ -95,6 +116,8 @@ allFilter.addEventListener("click", e => {
 
 sort.addEventListener("change", e => {
     //filterByAll();
+    console.log("jjjj");
     filterByTshirt();
+    filterBySize();
 });
 loadProducts();

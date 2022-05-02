@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
-    <link rel="stylesheet" href="./styles/styles_sass.css">
+    <link rel="stylesheet" href="./styles/styles_sass.scss">
     <link rel="stylesheet" href="./styles/mediaqueries.scss">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/mediaqueries.css">
 </head>
 <body class="white">
     <!--Header section-->
@@ -29,25 +31,65 @@
 
     <main class="shop">
         <h1 class="shop__tittle visbyExtraLight">Shop</h1>
-        <ul class="shop__filters">
-            <li id="allFilter" > <a href="?category=All">All</a></li>
-            <li id="tshirtsFilter"><a href="?category=T-shirt">T-shirts </a></li>
-            <li> <a href="?category=Hoodies">Hoodies</a></li>
-            <li> <a href="?category=Caps">Caps</a></li>
-        </ul>
-        <div>
-            <label for="sort">Sort price by</label>
-            <select name="sort" id="sort">
-                <option value="">def</option>
-                <option value="asc">asc</option>
-                <option value="dsc">desc</option>
-               
-            </select>
+        <div class="filters">
+            <ul class="shop__filters">
+                <li id="allFilter"> <a href="?category=All">All</a></li>
+                <li id="tshirtsFilter"><a href="?category=T-shirt">T-shirts </a></li>
+                <li id="hoodiesFilter"> <a href="?category=Hoodie">Hoodies</a></li>
+                <li id="capFilter"> <a href="?category=Cap">Caps</a></li>
+            </ul>
+            <div class="filters__right">
+                <label for="sort">Sort by</label>
+                <select name="sort" id="sort">
+                    <option value="">choose one</option>
+                    <option value="asc">Price ↑</option>
+                    <option value="dsc">Price ↓</option>
+                    <option value="size">S</option>
+
+                   
+                </select>
+
+                <label for="sort">Filter by</label>
+                <select name="filter" id="filter">
+                    <option value="">def</option>
+                    <option value="asc">Quantity</option>
+                    <option value="dsc">S</option>
+                    <option value="dsc">M</option>
+                    <option value="dsc">L</option>
+                                        
+                   
+                </select>
+            </div>
         </div>
         <div class="shop__separator"></div>
 
         <section id="products" class="products"></section>
     </main>
+
+    <section>
+        <div class="contact">
+            <div class="contact__text">
+                <h1 class="visbyLight">Hope you<br> <b class="c visbyBold">Don't regret it later</b></h1>
+            </div>
+            <div class="divider">
+                <img src="./images/footer_rect.png" alt="separador del footer">
+            </div>
+            <div class="contact__links">
+                <span class="contact__author">Miguel Olivares © 2022</span>
+                <!--preguntar por que no sirven-->
+                <section class="contact__social">
+                    <a href="https://www.behance.net/maog1999" target="_blank"> 
+                        <img src="./images/behance_logo.svg" alt="Logo behance">
+                    </a>
+                    <a href="https://www.linkedin.com/in/miguel-olivares-gonzalez-8123311a4/" target="_blank">
+                        <img src="./images/linkedin_logo.svg" alt="Logo Linkedinn">
+                    </a>
+                    <a href="https://www.instagram.com/miguelolivares9/" target="_blank">
+                        <img src="./images/instagram_logo.svg" alt="Logo Instagram">
+                    </a>
+                </section>
+                <button id="myBtn" onclick="topFunction()" class="footer__btn visbyRegular">Back to top</button>
+            </div>
 
     <script src="./logic/shop.js" type="module"></script>
 </body>

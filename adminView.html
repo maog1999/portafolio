@@ -7,6 +7,7 @@
     <title>Admin View</title>
     <link rel="stylesheet" href="./styles/styles_sass.css">
     <link rel="stylesheet" href="./styles/mediaqueries.scss">
+    <link rel="stylesheet" href="./styles/mediaqueries.css">
 </head>
 <body class="white">
     <!--Header section-->
@@ -39,7 +40,7 @@
                     <label for="category">Category</label>
                     <select name="category" id="category">
                         <option value="T-shirt">T-shirt</option>
-                        <option value="Hoodie">Hoodie</option>
+                        <option value="Hoodie">Hoodies</option>
                         <option value="Cap">Cap</option>
                     </select>               
                 </div>
@@ -53,19 +54,26 @@
 
                 <div class="radioBtn">
                     <label for="size">Size</label>
-                    <select name="size" id="size">
+                    <select class="size" name="size" id="size">
                         <option value="S">S</option>
                         <option value="M">M</option>
                         <option value="L">L</option>
                     </select>
+
+                    <label for="color">Color</label>
+                    <select name="color" id="color">
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="gray">Gray</option>
+                    </select>
                 </div>
+                <input class="submit" id="product__submit" type="submit" value="Cargar">
             </div>
 
             <div class="description__right">
                     <input id="product__image" type="file" accept=".png,.jpg,.jpeg" multiple name="images">
             </div>
                 
-            <input id="product__submit" type="submit" value="Cargar">
 
             
         </form>

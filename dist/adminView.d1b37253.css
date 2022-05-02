@@ -205,6 +205,19 @@ body {
   display: flex;
 }
 
+.product .description__left .radioBtn .size {
+  margin-right: 30px;
+}
+
+.product .description__left .submit {
+  color: #fcfdfc;
+  background-color: #0303fc;
+  border: none;
+  border-radius: 53px;
+  outline: none;
+  padding: 20px;
+}
+
 .product .description__left .info {
   width: 380px;
   height: 26px;
@@ -397,15 +410,20 @@ body {
   font-size: 1em;
 }
 
+.shop .filters {
+  display: flex;
+}
+
 .shop__tittle {
   text-align: center;
   color: #1b171b;
   margin-top: 110px;
+  margin-bottom: 40px;
   font-size: 3.8em;
 }
 
 .shop__separator {
-  width: 1573px;
+  width: 1629px;
   height: 1px;
   background-color: #8a8a8d;
   margin-left: 140px;
@@ -414,9 +432,16 @@ body {
 .shop__filters {
   margin-bottom: 20px;
   margin-left: 150px;
+  margin-right: 40%;
+  display: flex;
 }
 
-.shop__filters button {
+.shop__filters a {
+  color: #1b171b;
+  text-decoration: none;
+}
+
+.shop__filters li {
   all: unset;
   cursor: pointer;
   margin-right: 54px;
@@ -424,12 +449,15 @@ body {
 
 .shop .products {
   flex-wrap: wrap;
+  margin-left: 30px;
   display: flex;
 }
 
 .shop .product {
-  width: 456px;
-  height: 540px;
+  width: 600px;
+  height: 712px;
+  margin-bottom: 20px;
+  margin-right: 20px;
   display: block;
   position: relative;
 }
@@ -441,12 +469,20 @@ body {
 
 .shop .product__info {
   z-index: 2;
+  display: flex;
   position: absolute;
-  bottom: 0;
 }
 
 .shop .product__info p {
-  color: #fcfdfc;
+  color: #1b171b;
+}
+
+.shop .product__info .product__name {
+  margin-right: 430px;
+}
+
+.contact__text {
+  margin-top: 100px;
 }
 
 /*# sourceMappingURL=adminView.d1b37253.css.map */

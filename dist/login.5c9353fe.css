@@ -1,574 +1,483 @@
-@media (max-width: 1875px) {
-  .transition__lastest {
-    margin-left: 190px;
-  }
-
-  .transition__projects {
-    margin-right: 180px;
+@media (max-width: 1626px) {
+  .shop__separator {
+    width: 1325px;
   }
 }
 
-@media (max-width: 1730px) {
-  .transition__lastest {
-    margin-left: 130px;
+@media (max-width: 1600px) {
+  .shop__separator {
+    width: 1225px;
   }
 
-  .transition__projects {
-    margin-right: 127px;
-  }
-
-  .aboutme__text {
-    width: 134%;
-    z-index: 2;
-    text-align: center;
-    color: #fcfdfc;
-    margin-top: -10%;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    left: -17%;
-    right: 0;
-  }
-
-  .aboutme__picture {
+  .detail .detail__text {
     width: 100%;
-    margin-top: 42%;
-    margin-bottom: -29%;
-    transform: scale(.7);
+    margin-top: 40px;
+    font-size: 4.4em;
+    overflow: hidden;
   }
-}
 
-@media (max-width: 1460px) {
-  .transition__lastest, .transition__projects {
-    justify-content: center;
-    margin: 0 auto;
+  .detail .detail__text h1 {
+    width: 100%;
+    margin-left: 30px;
+  }
+
+  .detail .detail__header {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .detail .detail__header object {
+    margin-top: 50px;
+    margin-left: 32px;
+  }
+
+  .detail .detail__header .menu__list__black {
+    margin: auto auto auto 250px;
+    list-style: none;
+  }
+
+  .detail .detail__info h3 {
+    margin-left: 30px;
+    font-size: 1.8em;
+  }
+
+  .detail .detail__info p {
+    margin-left: 30px;
+    font-size: .9em;
+  }
+
+  .detail .detail__btn {
+    margin-top: 30px;
+    margin-left: 30px;
     display: flex;
   }
 
-  .line {
-    width: 25vw;
-    height: .5vw;
-    margin: 0 auto 7px;
-    display: flex;
-    transform: rotate(0deg);
+  .detail .detail__btn .btn__cart {
+    margin-left: 24px;
+    font-size: 1em;
   }
 }
 
-@media (max-width: 1490px) {
-  .menu__list a {
-    margin-right: 70px;
-  }
-}
-
-@media (max-width: 1340px) {
-  .intro__animation {
-    font-size: 8vw;
+@media (max-width: 1400px) {
+  .shop__separator {
+    width: 1125px;
   }
 
-  .text__description {
-    font-size: 1.5vw;
+  .detail__photo {
+    width: 60%;
   }
 
-  .menu__list a {
-    margin-right: 30px;
+  .detail__info {
+    width: 40%;
   }
 
-  .header__container {
-    margin-left: -40px;
-  }
-
-  .aboutme {
-    height: 1200px;
-  }
-
-  .header__logo {
-    transform: scale(.8);
-  }
-
-  .header__menu {
-    margin-right: 40px;
-  }
-
-  .aboutme__picture {
+  .detail .detail__text {
     width: 100%;
-    margin-top: 56%;
-    margin-bottom: -29%;
-    transform: scale(.7);
+    margin-top: 40px;
+    font-size: 4.4em;
+    overflow: hidden;
+  }
+
+  .detail .detail__text h1 {
+    width: 100%;
+    margin-left: 50px;
+  }
+
+  .detail .detail__header {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .detail .detail__header object {
+    margin-top: 50px;
+    margin-left: 52px;
+  }
+
+  .detail .detail__header .menu__list__black {
+    margin: auto auto auto 250px;
+    list-style: none;
+  }
+
+  .detail .detail__info h3 {
+    margin-left: 50px;
+    font-size: 1.8em;
+  }
+
+  .detail .detail__info p {
+    margin-left: 50px;
+    font-size: .9em;
+  }
+
+  .detail .detail__btn {
+    margin-top: 30px;
+    margin-left: 50px;
+    display: flex;
+  }
+
+  .detail .detail__btn .btn__cart {
+    margin-left: 24px;
+    font-size: 1em;
   }
 }
 
 @media (max-width: 1060px) {
-  .header__container {
-    margin-left: -10px;
+  .detail__photo {
+    width: 55%;
   }
 
-  .intro__animation {
-    font-size: 10vw;
+  .detail__info {
+    width: 45%;
   }
 
-  .text__description {
-    font-size: 1.7vw;
-  }
-
-  .header__logo {
-    margin-left: 70px;
-    transform: scale(.7);
-  }
-
-  .header__menu {
-    margin-right: 20px;
-  }
-
-  .intro__text {
-    margin-top: 50px;
-  }
-
-  .aboutme__picture {
+  .detail .detail__text {
     width: 100%;
-    margin-top: 68%;
-    margin-bottom: -29%;
-    transform: scale(.7);
-  }
-}
-
-@media (max-width: 1021px) {
-  .aboutme {
-    height: 1000px;
+    margin-top: 40px;
+    font-size: 4.4em;
+    overflow: hidden;
   }
 
-  .contact__text {
-    padding-top: 142px;
+  .detail .detail__text h1 {
+    width: 100%;
+    margin-left: 40px;
   }
 
-  .aboutme__text p {
-    font-size: 1em;
+  .detail .detail__header object {
+    margin-left: 42px;
   }
 
-  .divider {
-    margin-top: 145px;
+  .detail .detail__info h3, .detail .detail__info p, .detail .detail__btn {
+    margin-left: 40px;
+  }
+
+  .login__tittle {
+    margin-top: 110px;
+    font-size: 3em;
+  }
+
+  .login__inputs {
+    margin-top: 108px;
+  }
+
+  .login__inputs input {
+    width: 354px;
+    height: 20px;
+  }
+
+  .login__btn button {
+    width: 354px;
+    height: 52px;
+  }
+
+  .login .inputs__name {
+    width: 144px;
+    margin-right: 60px;
+  }
+
+  .login .inputs__lastname {
+    width: 144px;
   }
 }
 
 @media (max-width: 980px) {
-  .project__subtext {
-    width: 170px;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    bottom: 10%;
-    left: 0;
-    right: 0;
-  }
-
-  .project__subtext--ad {
-    width: 208px;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    bottom: 15%;
-    left: -20px;
-    right: 0;
-  }
-
-  .subtext__rotate {
-    transform: rotate(0deg);
-  }
-
-  .project__subtext2 {
-    width: 70px;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    top: 10%;
-    left: 0;
-    right: 0;
-  }
-
-  .subtext__rotate2 {
-    transform: rotate(0deg);
-  }
-
-  .love__text {
-    font-size: 3em;
-  }
-
-  .aboutme__picture {
+  .detail .detail__text {
     width: 100%;
-    margin-top: 78%;
-    margin-bottom: -29%;
-    transform: scale(.7);
+    margin-top: 20px;
+    font-size: 4.1em;
+    overflow: hidden;
   }
 
-  .photo__nomad {
-    width: 50%;
+  .detail .detail__text h1 {
+    width: 100%;
+    margin-left: 20px;
   }
 
-  .project__text {
-    font-size: 16vw;
+  .detail .detail__header object {
+    margin-left: 22px;
   }
 
-  .project__video {
-    width: 60%;
+  .detail .detail__header .menu__list__black {
+    margin-left: 225px;
   }
-}
 
-@media (max-width: 830px) {
-  .menu {
-    height: 100vh;
-    width: 100vw;
-    z-index: 10;
-    color: #fcfdfc;
-    background: #1b171b;
+  .detail .detail__info h3, .detail .detail__info p, .detail .detail__btn {
+    margin-left: 20px;
+  }
+
+  .login .inputs {
+    margin-top: 90px;
+  }
+
+  .login__tittle {
+    margin-top: 110px;
+    font-size: 2.6em;
+  }
+
+  .login__inputs {
+    margin-top: 50px;
+  }
+
+  .login__inputs input {
+    width: 314px;
+    height: 22px;
+  }
+
+  .login__btn button {
+    width: 314px;
+    height: 50px;
+  }
+
+  .login .first__inputs {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    transition: top 1s;
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    display: flex;
   }
 
-  .menu__list a {
-    color: #fcfdfc;
-    margin: 20px;
-    text-decoration: none;
+  .login .inputs__name {
+    width: 314px;
+    margin-right: 0;
   }
 
-  .openMenu {
-    margin-right: 20px;
+  .login .inputs__lastname {
+    width: 314px;
+  }
+}
+
+@media (max-width: 820px) {
+  .form .product {
+    margin-left: 220px;
     display: block;
   }
 
-  .closeMenu {
-    margin-top: 15px;
-    margin-right: 40px;
+  .form__tittle {
+    font-size: 3.2em;
   }
 
-  nav .menu .closeMenu {
+  .form .separator {
+    width: 500px;
+  }
+
+  .form .submit {
+    width: 338px;
+    position: absolute;
+    bottom: 3px;
+  }
+
+  .form .description__left {
+    margin-top: -40px;
+  }
+
+  .form .description__right {
+    width: 338px;
+    height: 85px;
+    border-radius: 20px;
+  }
+
+  .shop__separator {
+    width: 600px;
+  }
+
+  .detail {
     display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
   }
 
-  .menu__list a:hover {
-    color: #0303fc;
-    background: none;
-    font-size: 1.4rem;
-  }
-
-  .header__logo {
-    margin-left: 50px;
-    transform: scale(.5);
-  }
-
-  .intro__animation {
-    font-size: 14vw;
-  }
-
-  .text__description {
-    font-size: 2.5vw;
-  }
-
-  .project__subtext {
-    width: 170px;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    bottom: 14%;
-    left: 0;
-    right: 0;
-  }
-
-  .project__subtext--ad {
-    width: 208px;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    bottom: 14%;
-    left: -20px;
-    right: 0;
-  }
-
-  .project__subtext2 {
-    width: 70px;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    top: 14%;
-    left: 0;
-    right: 0;
-  }
-
-  .aboutme__picture {
+  .detail__photo {
     width: 100%;
-    margin-top: 66%;
-    margin-bottom: -27%;
-    transform: scale(.75);
+    height: 70%;
   }
 
-  .aboutme__text {
-    width: 176%;
-    z-index: 2;
-    text-align: center;
+  .detail .detail__header object {
+    display: none;
+  }
+
+  .detail .detail__header .menu__list__black {
+    position: absolute;
+    top: 48px;
+    right: 0;
+  }
+
+  .detail .detail__header .menu__list__black a {
     color: #fcfdfc;
-    margin-top: 30%;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    left: -39%;
-    right: 0;
-  }
-}
-
-@media (max-width: 761px) {
-  .photo__portada {
-    width: 45%;
-    z-index: 3;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
   }
 
-  .photo__proyecto01 {
-    width: 25%;
-    z-index: 3;
-    position: absolute;
-    top: 50%;
-    left: 14%;
-    transform: translateY(-137%);
+  .detail__info {
+    width: 100%;
+    height: 30%;
   }
 
-  .photo__proyecto02 {
-    width: 25%;
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    right: 16%;
-    transform: translateY(29%);
+  .detail__info .detail__text {
+    width: 100%;
+    margin-top: 40px;
+    font-size: 5em;
+    overflow: hidden;
   }
 
-  .project__transition {
-    font-size: 7vw;
-  }
-}
-
-@media (max-width: 679px) {
-  .aboutme {
-    height: 800px;
+  .detail__info .detail__text__02, .detail__info .detail__text__03 {
+    display: none;
   }
 
-  .project__subtext {
-    width: 120px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: .9em;
-    position: absolute;
-    bottom: 14%;
-    left: 0;
-    right: 0;
-  }
-
-  .project__subtext2 {
-    width: 44px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: .9em;
-    position: absolute;
-    top: 14%;
-    left: 0;
-    right: 0;
-  }
-
-  .project__subtext--ad {
-    width: 130px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: .9em;
-    position: absolute;
-    bottom: 14%;
-    left: -20px;
-    right: 0;
-  }
-
-  .aboutme__text p {
-    font-size: .9em;
-  }
-
-  .contact__text {
-    font-size: 3em;
-  }
-
-  .contact__btn {
+  .detail__info .detail__text h1 {
+    width: 100%;
+    margin-left: 50px;
     font-size: 1em;
   }
 
-  .love__text {
-    font-size: 2em;
+  .detail__info .detail__info {
+    width: 100%;
+    margin-top: 0;
+    overflow: hidden;
   }
 
-  .love__animation {
-    font-size: 3.5em;
+  .detail__info .detail__info h3 {
+    margin-left: 50px;
+    font-size: 1.8em;
+    position: absolute;
+    top: 79%;
+    right: 80px;
   }
 
-  .divider img {
-    width: 410px;
+  .detail__info .detail__info p {
+    margin-left: 50px;
   }
 
-  .contact__links {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+  .detail__info .detail__btn {
+    margin-top: -10px;
+    margin-left: 50px;
+    display: flex;
   }
 
-  .contact__links * {
-    margin: 8px;
-  }
-
-  .contact__social {
-    transform: scale(.8);
-  }
-
-  .contact__author {
-    margin-left: 36px;
-    font-size: .8em;
-  }
-
-  .footer__btn {
-    margin-left: 69px;
-    font-size: .8em;
+  .detail__info .detail__btn .btn__cart {
+    width: 80%;
+    height: 38px;
+    cursor: pointer;
+    color: #fcfdfc;
+    background-color: #0303fc;
+    border: none;
+    border-radius: 54px;
+    outline: none;
+    margin-left: 24px;
+    font-family: Visby CF;
+    font-size: 1em;
   }
 }
 
 @media (max-width: 600px) {
-  .text__description {
-    font-size: 2.7vw;
-    top: 66%;
+  .form .product {
+    margin-left: 120px;
+    display: block;
   }
 
-  .aboutme__text {
-    width: 176%;
-    z-index: 2;
+  .form__tittle {
     text-align: center;
-    color: #fcfdfc;
-    margin-top: 57%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 200px;
+    font-size: 2.8em;
+  }
+
+  .form .separator {
+    width: 300px;
+    margin-left: 145px;
+  }
+
+  .form .submit {
+    width: 338px;
     position: absolute;
-    left: -39%;
-    right: 0;
+    transform: translateY(280%);
   }
 
-  .aboutme__picture {
+  .form .description__left {
+    margin-top: -40px;
+  }
+
+  .form .description__right {
+    width: 338px;
+    height: 85px;
+    border-radius: 20px;
+  }
+
+  .detail__info .detail__text {
     width: 100%;
-    margin-top: 87%;
-    margin-bottom: -27%;
-    transform: scale(.75);
+    margin-top: 40px;
+    font-size: 3em;
+    overflow: hidden;
   }
 
-  .aboutme__tittle {
-    font-size: 11vw;
+  .detail__info .detail__text__02, .detail__info .detail__text__03 {
+    display: none;
   }
-}
 
-@media (max-width: 550px) {
-  .text__description {
-    font-size: 2.7vw;
-    top: 63%;
-  }
-}
-
-@media (max-width: 470px) {
-  .aboutme__picture {
+  .detail__info .detail__text h1 {
     width: 100%;
-    margin-top: 108%;
-    margin-bottom: -27%;
-    transform: scale(.75);
-  }
-
-  .aboutme__tittle {
-    font-size: 11vw;
-  }
-
-  .contact__text {
-    font-size: 2.2em;
-  }
-
-  .love__text {
+    margin-left: 30px;
     font-size: 1em;
   }
 
-  .love__animation {
-    font-size: 2.5em;
-  }
-
-  .divider {
-    margin-top: 254px;
-  }
-
-  .divider img {
-    width: 267px;
-  }
-
-  .contact__social {
-    transform: scale(.5);
-  }
-
-  .contact__author {
-    margin-left: 44px;
-    font-size: .7em;
-  }
-
-  .footer__btn {
-    margin-left: 76px;
-    font-size: .7em;
-  }
-}
-
-@media (max-width: 420px) {
-  .text__description {
-    font-size: 2.9vw;
-    top: 59%;
-  }
-}
-
-@media (max-width: 400px) {
-  .aboutme__picture {
+  .detail__info .detail__info {
     width: 100%;
-    margin-top: 128%;
-    margin-bottom: -27%;
-    transform: scale(.75);
+    margin-top: 0;
+    overflow: hidden;
   }
 
-  .aboutme__tittle {
-    font-size: 11vw;
+  .detail__info .detail__info h3 {
+    margin-left: 50px;
+    font-size: 1.4em;
+    position: absolute;
+    top: 76.3%;
+    right: 40px;
   }
 
-  .contact__text {
-    font-size: 1.9em;
-  }
-
-  .contact__btn {
+  .detail__info .detail__info p {
+    margin-left: 30px;
     font-size: .8em;
   }
 
-  .love__text {
-    font-size: .6em;
+  .detail__info .detail__btn {
+    margin-top: -10px;
+    margin-left: 30px;
+    font-size: .8em;
+    display: flex;
   }
 
-  .love__animation {
-    font-size: 2em;
+  .detail__info .detail__btn .btn__cart {
+    width: 70%;
+    height: 38px;
+    cursor: pointer;
+    color: #fcfdfc;
+    background-color: #0303fc;
+    border: none;
+    border-radius: 54px;
+    outline: none;
+    margin-left: 24px;
+    font-family: Visby CF;
+    font-size: 1em;
   }
 
-  .aboutme {
-    height: 680px;
+  .login .inputs {
+    margin-top: 90px;
+  }
+
+  .login__tittle {
+    margin-top: 110px;
+    font-size: 2.6em;
+  }
+
+  .login__inputs {
+    margin-top: 50px;
+  }
+
+  .login__inputs input {
+    width: 280px;
+    height: 22px;
+    font-size: .8em;
+  }
+
+  .login__btn button {
+    width: 280px;
+    height: 45px;
+    font-size: .8em;
+  }
+
+  .login .inputs__name, .login .inputs__lastname {
+    width: 280px;
   }
 }
 
