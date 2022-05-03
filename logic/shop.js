@@ -52,7 +52,7 @@ async function loadProducts(){
 function renderProducts(item){
     const product = document.createElement("a");
     product.className = "product";
-    product.setAttribute("href", `./productDetail?id=${item.id}`);
+    product.setAttribute("href", `./productDetail.html?id=${item.id}`);
 
 
     const coverImage = item.images ? item.images[0] : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.101-help.com%2Fc0f5234e26-icono-broken-image-en-google-chrome-browser%2F&psig=AOvVaw2pfrdI-2iiP9GY3ImEUq_N&ust=1651205257679000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCKiqzInxtfcCFQAAAAAdAAAAABAN";
