@@ -5,6 +5,7 @@ async function addProduct(db, product){
     try{
         await addDoc(collection(db, "products"), product);
         console.log("product added");
+        alert("¡El producto fue creado con exito!")
     }catch(e){
         console.log(e);
     }

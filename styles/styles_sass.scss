@@ -395,7 +395,7 @@ body{
     }
 
     &__photo{
-        background-image: url("/images/t-shirt_01.jpg");
+        //background-image: url("/images/t-shirt_01.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -447,6 +447,7 @@ body{
 
             & p{
                 margin-left: 50px;
+                width: 70%;
             }
         }
 
@@ -477,6 +478,7 @@ body{
 .cart{
     width: 100%;
     display: flex;
+    justify-content: center;
     &__row{
         
        &__tittles{
@@ -484,7 +486,7 @@ body{
            margin-left: 145px;
        } 
         &__separator{
-            width: 1100px;
+            width: 830px;
             height: 1px;
             background-color: $gray-maog;
             margin-left: 140px;
@@ -495,16 +497,37 @@ body{
             margin-left: 461px;
 
             & p{
-                margin-right: 126px;
+                margin-right: 160px;
             }
         }
 
+    }
+    
+    &__resume {
+        margin-left: 141px;
+        width: 100%;
+        height: 100px;
+
+        & li {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+
+           & div {
+               margin-right: 160px;
+           }
+
+           & img {
+               margin-right: 30px;
+               cursor: pointer;
+           }
+        }
 
     }
 
     &__total{
         text-align: center;
-        margin-left: 90px;
+        margin-left: -60px;
                     
         &__info{
             width: 388px;

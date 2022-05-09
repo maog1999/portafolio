@@ -527,6 +527,7 @@ productForm.addEventListener("submit", async (e)=>{
     const quantity = productForm.quantity.value;
     const description = productForm.description.value;
     const size = productForm.size.value;
+    const color = productForm.color.value;
     const images = productForm.images.files;
     let gallery = [];
     if (images.length) {
@@ -542,6 +543,7 @@ productForm.addEventListener("submit", async (e)=>{
         quantity,
         description,
         size,
+        color,
         images: gallery
     };
     await _addProducts.addProduct(_importFirebase.db, newProduct);
@@ -560,6 +562,7 @@ async function addProduct(db, product) {
     try {
         await _firestore.addDoc(_firestore.collection(db, "products"), product);
         console.log("product added");
+        alert("¡El producto fue creado con exito!");
     } catch (e) {
         console.log(e);
     }

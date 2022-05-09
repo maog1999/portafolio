@@ -14,6 +14,7 @@ productForm.addEventListener("submit", async (e) =>{
     const quantity = productForm.quantity.value;
     const description = productForm.description.value;
     const size = productForm.size.value;
+    const color = productForm.color.value;
     const images = productForm.images.files;
 
     let gallery = [];
@@ -33,6 +34,7 @@ productForm.addEventListener("submit", async (e) =>{
         quantity,
         description,
         size,
+        color,
         images: gallery,
     }
 

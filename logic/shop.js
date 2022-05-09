@@ -17,12 +17,13 @@ function getCategory(){
     const searchParams = new URLSearchParams(url);
     return searchParams.get("category");
 }
-
 function getSize(){
     const url = window.location.search;
     const searchParams = new URLSearchParams(url);
     return searchParams.get("size");
 }
+
+console.log(getSize());
 
 async function loadProducts(){
 
