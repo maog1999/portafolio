@@ -39,7 +39,7 @@ function renderProducts (product) {
 
     productInfoSection.innerHTML = `
             <div class="detail__header">
-                <img src="../images/logo-black.png" width="45px" alt="logo">
+                <img src="https://firebasestorage.googleapis.com/v0/b/maog-shop.appspot.com/o/images%2Flogo-black.png?alt=media&token=0baf1284-d5f6-4f98-9d0e-0e89dde59004" width="45px" alt="logo">
                 <li class="menu__list__black"><a href="#">Cart</a> </li>
             </div>
 
@@ -64,9 +64,10 @@ function renderProducts (product) {
     addToCartBtn.addEventListener("click", async (e) => {
         e.preventDefault();
         
-        addProductToCart(cart);
         cart.push(product);
-        if(userLogged){
+        addProductToCart(cart);
+
+        if (userLogged) {
             await createFirebaseCart(db, userLogged.uid, cart);
         }
         
@@ -74,10 +75,8 @@ function renderProducts (product) {
     });
 }
 
-async function addProductToCart(){
+async function addProductToCart(cart){
     localStorage.setItem("cat", JSON.stringify(cart));
-    await createFirebaseCart(db);
-
 }
 
 function getMyCart(){
