@@ -1,6 +1,8 @@
 import { async } from "@firebase/util";
 import { db } from "./importFirebase";
 import { getProducts } from "./products";
+import { currencyFormat } from "./utils/index";
+
 
 const productSection = document.getElementById("products");
 const tshirtsFilter = document.getElementById("tshirtsFilter");
@@ -63,7 +65,7 @@ function renderProducts(item){
         <img src="${coverImage}" alt="" class="product__image">
         <div class="product__info">
             <p class="product__name">${item.name}</p>
-            <p class="product__price">${item.price}</p>
+            <p class="product__price">${currencyFormat(item.price)}</p>
         </div>
     `;
 

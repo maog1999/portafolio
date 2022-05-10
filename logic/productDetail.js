@@ -2,6 +2,7 @@ import { async } from "@firebase/util";
 import { db, auth } from "./importFirebase"
 import { doc, getDoc } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
+import { currencyFormat } from "./utils/index";
 import { createFirebaseCart, getFirebaseCart } from "./cart";
 
 
@@ -50,7 +51,7 @@ function renderProducts (product) {
             </div>
 
             <div class= "detail__info">
-                <h3>${product.price}</h3>
+                <h3>${currencyFormat(product.price)}</h3>
                 <p>${product.description}</p>
             </div>
 
@@ -86,15 +87,14 @@ function getMyCart(){
 
 onAuthStateChanged(auth, async (user) => {
     if (user) {
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/firebase.User
+     
       userLogged = user;
       cart = await getFirebaseCart(db, userLogged.uid);
-      // ...
+
     } else {
-        cart = getMyLocalCart();
-      // User is signed out
-      // ...
+        //aca toca cambiar por myCart
+        cart = getMyCart();
+     
     }
 
     //loadProducts();
@@ -102,3 +102,8 @@ onAuthStateChanged(auth, async (user) => {
   });
 
 getProduct("id");
+
+export {
+    getMyCart,
+    addProductToCart,
+}

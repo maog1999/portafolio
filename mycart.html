@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Cart</title>
-    <link rel="stylesheet" href="./styles/styles_sass.css">
+    <link rel="stylesheet" href="./styles/styles_sass.scss">
     <link rel="stylesheet" href="./styles/mediaqueries.scss">
 
 </head>
@@ -42,59 +42,21 @@
                 </div>
             </div>
             <div class="cart__row__separator"></div>
-            <ul class="cart__resume">
-                <li class="cart__resume__list">
-                    <img class="product_img" src="./images/cart.png" alt="producto">
-                    <div>
-                        <h3>Basic Logo Hoodie</h3>                
-                        <p>Hoodie color red</p>
-                    </div>
-                    <div>
-                        <p class="product__price">$40.00</p>
-                    </div>
-                    <div>
-                        <img src="./images/remove-btn.png" alt="remove_btn" width="32px">
-                    </div>
-                </li>
-                <li class="cart__resume__list">
-                    <img class="product_img" src="./images/cart.png" alt="producto">
-                    <div>
-                        <h3>Basic Logo Hoodie</h3>                
-                        <p>Hoodie color red</p>
-                    </div>
-                    <div>
-                        <p class="product__price">$40.00</p>
-                    </div>
-                    <div>
-                        <img src="./images/remove-btn.png" alt="remove_btn" width="32px">
-                    </div>
-                </li>
-                <li class="cart__resume__list">
-                    <img class="product_img" src="./images/cart.png" alt="producto">
-                    <div>
-                        <h3>Basic Logo Hoodie</h3>                
-                        <p>Hoodie color red</p>
-                    </div>
-                    <div>
-                        <p class="product__price">$40.00</p>
-                    </div>
-                    <div>
-                        <img src="./images/remove-btn.png" alt="remove_btn" width="32px">
-                    </div>
-                </li>
+            <ul class="cart__resume" id="cart__resume">
+                               
             </ul>
         </div>
 
         <div class="cart__total">
             <div class="cart__total__info">
-                <div class="cart__total__info__inside">
-                    <p>Total payment is:</p>
-                    <h1>$82.00</h1>
+                <div class="cart__total__info__inside" id="cart__total__info__inside">
+                    
                 </div>
             </div>
             <button class="cart__total__btn">Go to checkout</button>
         </div>
     </main>
 
+    <script src="./logic/myCart.js" type="module"></script>
 </body>
 </html>
