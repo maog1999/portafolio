@@ -5,13 +5,10 @@ import { currencyFormat } from "./utils/index";
 
 
 const productSection = document.getElementById("products");
-const tshirtsFilter = document.getElementById("tshirtsFilter");
-const allFilter = document.getElementById("allFilter");
-const hoodiesFilter = document.getElementById("hoodiesFilter");
-const capFilter = document.getElementById("capFilter");
-
 const sort = document.getElementById("sort");
+const filter = document.getElementById("filter");
 
+//aplicarle filtros a este arreglo porque ya todos estan aca
 let products = [];
 
 function getCategory(){
@@ -19,18 +16,11 @@ function getCategory(){
     const searchParams = new URLSearchParams(url);
     return searchParams.get("category");
 }
-function getSize(){
-    const url = window.location.search;
-    const searchParams = new URLSearchParams(url);
-    return searchParams.get("size");
-}
-
-console.log(getSize());
 
 async function loadProducts(){
 
     const category = getCategory();
-    const size = getSize();
+    
 
     const firebaseProducts = await getProducts(db);
     let filteredProducts = [];
@@ -42,15 +32,13 @@ async function loadProducts(){
         filteredProducts = firebaseProducts.filter((product) => product.category === category);
     }
 
-    if(size === "S"){
-        filteredProducts = firebaseProducts.filter((product) => product.size === size);        
-    }
-
     filteredProducts.forEach(product => {
         renderProducts(product);
     });
     products = filteredProducts;
 }
+
+
 
 function renderProducts(item){
     const product = document.createElement("a");
@@ -72,55 +60,67 @@ function renderProducts(item){
     productSection.appendChild(product);
 }
 
-function filterByTshirt(){
-    const priceOrder = sort.value;
- 
+
+async function filtersAction(){
+    const sortValue = sort.value;
+    const filterValue = filter.value;
+    console.log(filterValue);
+
     let sortedProducts = [];
-    if(priceOrder === "asc"){
+ 
+    //--------Sort by----------
+    if(sortValue === "asc"){
         sortedProducts = products.sort((a, b) => 
             b.price - a.price);
     }
 
-    if(priceOrder === "dsc"){
+    if(sortValue === "dsc"){
         sortedProducts = products.sort((a, b) => 
             a.price - b.price);
     }
+
+    if(sortValue === "nameAsc") {
+        sortedProducts = products.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
+    }
+
+    if(sortValue === "nameDsc") {
+        sortedProducts = products.sort((a, b) => b.name.toLowerCase().localeCompare(a.name.toLowerCase()));
+    }
+
+    if(sortValue === "quantityAsc") {
+        sortedProducts = products.sort((a, b) => b.quantity - a.quantity)
+    }
+
+    if(sortValue === "quantityDsc") {
+        sortedProducts = products.sort((a, b) => a.quantity - b.quantity)
+    }
+    
+    //---------Filter by-----------
+    if(filterValue === "S" || filterValue === "M" || filterValue === "L") {
+        sortedProducts = products.filter((product) => product.size === filterValue);
+    }
+
+    if(filterValue === "black" || filterValue === "white" || filterValue === "gray") {
+        sortedProducts = products.filter((product) => product.color === filterValue);
+    }
+
 
     productSection.innerHTML = "";
     sortedProducts.forEach(product => {
         renderProducts(product);
     });
     console.log(sortedProducts);
+    console.log(sortValue);
+
 }
 
-function filterBySize(){
-    const priceOrder = sort.value;
-
-    if(priceOrder==="S"){
-        alert("hola");
-    }
-}
-
-
-tshirtsFilter.addEventListener("click", e => {
-
-});
-
-async function filterByAll(){
-    productSection.innerHTML = "";
-    products.forEach(product => {
-        renderProducts(product);
-    });
-}
-
-allFilter.addEventListener("click", e => {
-    filterByAll();
-});
 
 sort.addEventListener("change", e => {
-    //filterByAll();
-    console.log("jjjj");
-    filterByTshirt();
-    filterBySize();
+    filtersAction();
 });
+
+filter.addEventListener("change", e => {
+    filtersAction();
+})
+
 loadProducts();

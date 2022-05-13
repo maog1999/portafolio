@@ -9,9 +9,8 @@ import { createFirebaseCart, getFirebaseCart } from "./cart";
 const productInfoSection = document.getElementById("detail__info");
 const productImgSection = document.getElementById("detail__photo");
 
-let cart = getMyCart();
+let cart = [];
 let userLogged = undefined;
-
 
 function getParam(param){
     const url = window.location.search;
@@ -41,7 +40,7 @@ function renderProducts (product) {
     productInfoSection.innerHTML = `
             <div class="detail__header">
                 <img src="https://firebasestorage.googleapis.com/v0/b/maog-shop.appspot.com/o/images%2Flogo-black.png?alt=media&token=0baf1284-d5f6-4f98-9d0e-0e89dde59004" width="45px" alt="logo">
-                <li class="menu__list__black"><a href="#">Cart</a> </li>
+                <li class="menu__list__black"><a href="./myCart.html">Cart</a> <div id="cartCounter"> ${cart.length}</div></li>
             </div>
 
             <div class="detail__text visbyMedium">
@@ -56,22 +55,24 @@ function renderProducts (product) {
             </div>
 
             <div class="detail__btn">
-                <button>cantidad</button>
-                <button class="btn__cart">Add to cart</button>
+            <img src="https://firebasestorage.googleapis.com/v0/b/maog-shop.appspot.com/o/images%2Fcounter.png?alt=media&token=0f9a670c-fa0e-4d11-a8e3-658dda8642fd" width="" alt="contador">
+            <button class="btn__cart">Add to cart</button>
             </div>
     `
 
     const addToCartBtn = productInfoSection.querySelector(".btn__cart");
+    const cartCounter = productInfoSection.querySelector("#cartCounter");
+
     addToCartBtn.addEventListener("click", async (e) => {
         e.preventDefault();
         
         cart.push(product);
         addProductToCart(cart);
-
+        
         if (userLogged) {
             await createFirebaseCart(db, userLogged.uid, cart);
         }
-        
+        cartCounter.innerText = cart.length;
         console.log(cart.length);
     });
 }
@@ -92,18 +93,15 @@ onAuthStateChanged(auth, async (user) => {
       cart = await getFirebaseCart(db, userLogged.uid);
 
     } else {
-        //aca toca cambiar por myCart
         cart = getMyCart();
      
     }
-
-    //loadProducts();
-
+    getProduct("id");
   });
 
-getProduct("id");
 
 export {
     getMyCart,
     addProductToCart,
+    
 }
