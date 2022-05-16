@@ -12,7 +12,7 @@
   },
   "scripts": {
     "dev": "parcel ./html/*.html --no-cache",
-    "build": "parcel build --public-url ./ ./html/*.html",
+    "build": "parcel build --public-url ./. ./html/*.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
