@@ -7,6 +7,7 @@ import { addDoc, collection, deleteDoc, doc } from "firebase/firestore";
  
 let total = 0;
 let cart = [];
+let userLogged = undefined;
 const cartResume = document.getElementById("cart__resume");
 const cartPriceTotal = document.getElementById("cart__total__info__inside");
 const checkoutInfo = document.getElementById("checkoutInfo");
