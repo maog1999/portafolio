@@ -80,7 +80,7 @@ body{
 .menu__list a{
     text-decoration: none;
     color: #1B171B;
-    margin-right: 80px;
+    padding-right: 80px;
 
 }
 .menu__list :hover{
@@ -121,6 +121,21 @@ body{
 .header__menu{
     margin-right: 60px;
 }
+
+/*#cart__counter {
+    background-color: #0303FC;
+    width: 20px;
+    height: 20px;
+    font-size: 0.8em;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FCFDFC;
+    position: absolute;
+    top: 28px;
+    right: 28%;
+}*/
 
 
 .intro__animation{

@@ -10,6 +10,14 @@ const createUserBtn = document.getElementById("createUserBtn");
 const loginForm = document.getElementById("loginForm");
 const loginFormBtn = document.getElementById("loginFormBtn");
 
+//animacion intro
+ScrollReveal().reveal('.login', { 
+    delay: 500,
+    duration: 1500,
+    origin: 'bottom',
+    distance: '-50px',
+});
+
 if(createUserBtn){
     createUserBtn.addEventListener("click", async e =>{
         e.preventDefault();
@@ -30,9 +38,16 @@ if(createUserBtn){
             const userCreated = await createUser(auth, newUser);
             await addUserToDatabase(db, userCreated.uid, newUser);
         
-            alert(`Bienvenido, ${ name }`);
+            alert(`¡Cuenta creada!, ${ name } ahora inicia sesión`);
             console.log("creando user");
             console.log(userCreated);
+
+            createUserForm.name.value = "";
+            createUserForm.lastName.value = "";
+            createUserForm.email.value = ""; 
+            createUserForm.password.value = "" ;
+            createUserForm.confirmPassword.value = "";
+
     
         }if(password !== confirmPassword){
             alert("Las contraseñas no coinciden");
@@ -53,7 +68,7 @@ if(loginFormBtn){
         if(user.isAdmin){
             location.href = "./adminView.html"
         }else{
-            location.href = "./mycart.html"
+            location.href = "./shop.html"
     
         }
     });

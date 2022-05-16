@@ -4,7 +4,7 @@ import { getMyCart } from "./productDetail";
 import { getFirebaseCart } from "./cart";
 
 let cart = [];
-const cartCounter = document.getElementById("cart__counter");
+const cartCounter = document.getElementById("cartCounter");
 
 onAuthStateChanged(auth, async (user) => {
     if (user) {
@@ -12,7 +12,7 @@ onAuthStateChanged(auth, async (user) => {
       userLogged = user;
       cart = await getFirebaseCart(db, userLogged.uid);
       cartCounter.innerHTML = `
-      <p class="menu__list"><a id="cart__counter" href="./myCart.html">Cart</a>${cart.length}</p>
+      <li class="menu__list__black"><a href="./myCart.html">Cart</a> <div id="cartCounter"> ${cart.length}</div></li>
   
         `;
       console.log(cart.length);

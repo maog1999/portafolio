@@ -10,103 +10,23 @@ $gray-maog: #8A8A8D;
     padding: 0;
     box-sizing: 0;
 }
-/*
-@font-face {
-    font-family: 'visby_cflight';
-    src: url('../typography/visbycf-light-webfont.woff2') format('woff2'),
-         url('../typography/visbycf-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 
-}
-
-@font-face {
-    font-family: 'visby_cfregular';
-    src: url('../tipography/visbycf-regular-webfont.woff2') format('woff2'),
-         url('../tipography/visbycf-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'visby_cfthin';
-    src: url('../tipography/visbycf-thin-webfont.woff2') format('woff2'),
-         url('../tipography/visbycf-thin-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'visby_cfbold';
-    src: url('../tipography/visbycf-bold-webfont.woff2') format('woff2'),
-         url('../tipography/visbycf-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'visby_cfbold';
-    src: url('../tipography/visbycf-bold-webfont.woff2') format('woff2'),
-         url('../tipography/visbycf-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'visby_cflight';
-    src: url('../tipography/visbycf-light-webfont.woff2') format('woff2'),
-         url('../tipography/visbycf-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'visby_cfregular';
-    src: url('../tipography/visbycf-regular-webfont.woff2') format('woff2'),
-         url('../tipography/visbycf-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'visby_cfthin';
-    src: url('visbycf-thin-webfont.woff2') format('woff2'),
-         url('visbycf-thin-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-.visbyRegular{
-    font-family: 'Visby CF Regular' sans-serif;
-}
-.visbyLight{
-    font-family: 'Visby CF Light';
-}
-.visbyBold{
-    font-family: 'Visby CF Bold';
-}
-.visbyExtraLight{
-    font-family: 'Visby CF ExtraLight';
-}
-.visbyMedium{
-    font-family: 'Visby CF Medium';
-}*/
-
-ul{
+ul {
     list-style: none;
 }
 
-body{
+body {
     background-color: $black-maog;
     font-family: 'Visby CF';
     overflow-x: hidden;
 
+}
+html {
+    overflow-x: hidden;
+}
+
+section {
+    overflow-x: hidden;
 }
 
 .white{
@@ -149,6 +69,11 @@ body{
 }
 
 .menu{
+    .menu-hamburguesa {
+        display: none;
+    }
+    
+
     &__list{
 
         & a{
@@ -173,6 +98,19 @@ body{
                 cursor: pointer;
             }
         }
+        
+    }
+    .openMenu {
+        overflow: hidden;
+        font-size: 1.8rem;
+        display: none;
+        cursor: pointer;
+    }
+    
+    .closeMenu{
+        font-size: 1.4rem;
+        display: none;
+        cursor: pointer;
         
     }
 
@@ -431,8 +369,8 @@ body{
                 align-items: center;
                 color: $white-maog;
                 position: absolute;
-                top: 10px;
-                right: 99px;
+                top: 28px;
+                right: 28%;
             }
         }  
 
@@ -553,6 +491,43 @@ body{
     &__total{
         text-align: center;
         margin-left: -60px;
+
+        .checkoutInfo {
+            display: flex;
+            flex-direction: column;
+            padding-top: 30px;
+
+            & input{
+                border: none;
+                outline: none;
+                border-bottom: 1px solid $gray-maog;
+                width: 380px;
+                height: 26px;
+                margin-bottom: 34px;
+                background-color: transparent;
+                color: $black-maog;
+                font-family: 'Visby CF';
+                font-size: 1em;
+                opacity: 0.7;
+                transition: 0.4s;
+    
+                &:focus{
+                    opacity: 1;
+                    border-bottom: 1px solid $black-maog;
+                }
+            }
+
+            & select {
+                width: 380px;
+                height: 20px;
+                border-radius: 20px;
+                color: $gray-maog;
+
+                & option {
+                    color: $black-maog;
+                }
+            }
+        }
                     
         &__info{
             width: 388px;
@@ -630,9 +605,15 @@ body{
     }
 
     .products{
-        margin-left: 30px;
+        padding-left: 30px;
         display: flex;
         flex-wrap: wrap;
+        overflow-y: hidden;
+        padding-bottom: 30px;
+    }
+    .imgAnimation {
+        overflow: hidden;
+
     }
 
     .product{
@@ -646,6 +627,12 @@ body{
         &__image{
             width: 100%;
             height: 100%;
+
+        }
+        .product__image:hover {
+            transform: scale(1.15);
+            transition: 0.3s;
+
         }
 
         &__info{
@@ -655,6 +642,7 @@ body{
 
             & p{
                 color: $black-maog;
+
             }
 
             .product__name{

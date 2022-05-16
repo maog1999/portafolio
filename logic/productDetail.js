@@ -9,6 +9,7 @@ import { createFirebaseCart, getFirebaseCart } from "./cart";
 const productInfoSection = document.getElementById("detail__info");
 const productImgSection = document.getElementById("detail__photo");
 
+
 let cart = [];
 let userLogged = undefined;
 
@@ -72,6 +73,7 @@ function renderProducts (product) {
         if (userLogged) {
             await createFirebaseCart(db, userLogged.uid, cart);
         }
+        
         cartCounter.innerText = cart.length;
         console.log(cart.length);
     });
@@ -94,7 +96,7 @@ onAuthStateChanged(auth, async (user) => {
 
     } else {
         cart = getMyCart();
-     
+        
     }
     getProduct("id");
   });

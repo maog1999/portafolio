@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Cart</title>
-    <link rel="stylesheet" href="./styles/styles_sass.scss">
-    <link rel="stylesheet" href="./styles/mediaqueries.scss">
+    <link rel="stylesheet" href="../styles/styles_sass.scss">
+    <link rel="stylesheet" href="../styles/mediaqueries.scss">
 
 </head>
 <body class="white">
@@ -14,7 +14,7 @@
     <header class="header">
         <nav class="header__container">
             <div class="header__logo">
-                <object data="./images/logo.svg" type=""></object>
+                <object data="../images/logo.svg" type=""></object>
             </div>
             <div class="header__menu">
                 <div class="openMenu"><i class="fa fa-bars"></i></div>
@@ -53,10 +53,22 @@
                     
                 </div>
             </div>
-            <button class="cart__total__btn">Go to checkout</button>
+            <form action="" id="checkoutInfo" class="checkoutInfo">
+                <input type="text" placeholder="Name" name="name">
+                <input type="text" placeholder="Identification Card" name="id">
+                <input type="text" placeholder="City" name="city">
+                <input type="text" placeholder="Adress" name="adress">
+                <select class="payMethod" name="payMethod" id="payMethod">
+                    <option value="">Pay Method</option>
+                    <option value="visa">Visa</option>
+                    <option value="cash">Cash</option>
+                    <option value="pse">PSE</option>
+                </select>
+                <button id="btnCheckout" class="cart__total__btn">Complete Payment</button>
+            </form>
         </div>
     </main>
 
-    <script src="./logic/myCart.js" type="module"></script>
+    <script src="../logic/myCart.js" type="module"></script>
 </body>
 </html>

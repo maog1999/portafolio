@@ -3,10 +3,23 @@ import { db } from "./importFirebase";
 import { getProducts } from "./products";
 import { currencyFormat } from "./utils/index";
 
-
 const productSection = document.getElementById("products");
 const sort = document.getElementById("sort");
 const filter = document.getElementById("filter");
+
+ScrollReveal().reveal('.products', { 
+    delay: 1000,
+    duration: 1500,
+    origin: 'bottom',
+    distance: '-50px',
+});
+
+ScrollReveal().reveal('.contact__text', {
+    delay: 5000, 
+    duration: 2000,
+    origin: 'top',
+    distance: '-150px',
+});
 
 //aplicarle filtros a este arreglo porque ya todos estan aca
 let products = [];
@@ -50,7 +63,9 @@ function renderProducts(item){
 
 
     product.innerHTML = `
+        <div class = "imgAnimation">
         <img src="${coverImage}" alt="" class="product__image">
+        </div>
         <div class="product__info">
             <p class="product__name">${item.name}</p>
             <p class="product__price">${currencyFormat(item.price)}</p>
@@ -124,3 +139,4 @@ filter.addEventListener("change", e => {
 })
 
 loadProducts();
+

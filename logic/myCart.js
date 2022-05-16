@@ -4,13 +4,17 @@ import { getFirebaseCart, createFirebaseCart } from "./cart";
 import { getMyCart, addProductToCart } from "./productDetail";
 import { currencyFormat } from "./utils/index";
 import { async } from "@firebase/util";
+import { addDoc, collection, deleteDoc, doc } from "firebase/firestore";
  
+let total = 0;
 let cart = [];
 const cartResume = document.getElementById("cart__resume");
 const cartPriceTotal = document.getElementById("cart__total__info__inside");
+const checkoutInfo = document.getElementById("checkoutInfo");
+const btnCheckout = document.getElementById("btnCheckout");
 
 function loadCart(cart) {
-  let total = 0;
+  total = 0;
   cart.forEach(product => {
     renderProducts(product);
     total += parseInt(product.price);
@@ -65,18 +69,69 @@ function renderProducts(product) {
   cartResume.appendChild(productCart);
 
   productCart.addEventListener("click", e => {
+    e.preventDefault();
     if(e.target.tagName === "IMG"){
       removeProducts(product.id);
     }
   });
 };
 
+//----------Checkout------------
+const deleteCart = async () => {
+  try {
+    await deleteDoc(doc(db, "cart", userLogged.uid));
+    loadCart([]);
+    console.log("actulizando...");
+  } catch(e) {
+    console.log(e);
+  }
+  window.location.reload();
+}
+
+const createOrder = async (userData) => {
+  try {
+    const order = await addDoc(collection(db, "orders"),{
+      ...userData, 
+      products: cart,
+      total
+    });
+    alert(`Gracias ${userData.name}, tu orden ${order.id} va en camino`);
+
+    deleteCart();
+  }catch(e){
+    console.log(e);
+  }
+};
+
+btnCheckout.addEventListener("click", e => {
+  e.preventDefault();
+  const name = checkoutInfo.name.value;
+  const id = checkoutInfo.id.value;
+  const adress = checkoutInfo.adress.value;
+
+  
+  const userData = {
+    name, 
+    id,
+    adress
+  }
+
+  if(cart.length){
+    if(name && id  && adress) {
+      createOrder(userData);
+    } else {
+      alert("Completa todos los campos");
+    }
+  } else{
+    alert("Aún no tienes productos en el carrito :(")
+  }
+});
+
 onAuthStateChanged(auth, async (user) => {
     if (user) {
      
       userLogged = user;
       cart = await getFirebaseCart(db, userLogged.uid);
-      console.log(cart);
 
     } else {
         cart = getMyCart();

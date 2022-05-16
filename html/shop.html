@@ -5,25 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
-    <link rel="stylesheet" href="./styles/styles_sass.scss">
-    <link rel="stylesheet" href="./styles/mediaqueries.scss">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/mediaqueries.css">
+    <link rel="stylesheet" href="../styles/styles_sass.scss">
+    <link rel="stylesheet" href="../styles/mediaqueries.scss">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/mediaqueries.css">
 </head>
 <body class="white">
     <!--Header section-->
     <header class="header">
         <nav class="header__container">
             <div class="header__logo">
-                <object data="./images/logo.svg" type=""></object>
+                <object data="../images/logo.svg" type=""></object>
             </div>
             <div class="header__menu">
                 <div class="openMenu"><i class="fa fa-bars"></i></div>
                 <ul class="menu">
                     <li class="menu__list__black"><a href="./shop.html">Shop</a> </li>
                     <li class="menu__list__black"><a href="./login.html">Login</a> </li>
-                    <li class="menu__list__black"><a href="./myCart.html">Cart</a> </li>
-                    <div class="closeMenu"><i class="fa fa-times"></i></div>
+                    <li id="cartCounter" class="menu__list__black"><a href="./myCart.html">Cart</a> </li>
+                    <li class="menu-hamburguesa" ><img src="../images/menu-hambur.png" alt="menu" width="20px"></li>
                 </ul>
             </div>
         </nav>
@@ -38,6 +38,7 @@
                 <li id="hoodiesFilter"> <a href="?category=Hoodie">Hoodies</a></li>
                 <li id="capFilter"> <a href="?category=Cap">Caps</a></li>
             </ul>
+            <!--All filters-->
             <div class="filters__right">
                 <label for="sort">Sort by</label>
                 <select name="sort" id="sort">
@@ -77,25 +78,26 @@
                 <h1 class="visbyLight">Hope you<br> <b class="c visbyBold">Don't regret it later</b></h1>
             </div>
             <div class="divider">
-                <img src="./images/footer_rect.png" alt="separador del footer">
+                <img src="../images/footer_rect.png" alt="separador del footer">
             </div>
             <div class="contact__links">
                 <span class="contact__author">Miguel Olivares © 2022</span>
                 <!--preguntar por que no sirven-->
                 <section class="contact__social">
                     <a href="https://www.behance.net/maog1999" target="_blank"> 
-                        <img src="./images/behance_logo.svg" alt="Logo behance">
+                        <img src="../images/behance_logo.svg" alt="Logo behance">
                     </a>
                     <a href="https://www.linkedin.com/in/miguel-olivares-gonzalez-8123311a4/" target="_blank">
-                        <img src="./images/linkedin_logo.svg" alt="Logo Linkedinn">
+                        <img src="../images/linkedin_logo.svg" alt="Logo Linkedinn">
                     </a>
                     <a href="https://www.instagram.com/miguelolivares9/" target="_blank">
-                        <img src="./images/instagram_logo.svg" alt="Logo Instagram">
+                        <img src="../images/instagram_logo.svg" alt="Logo Instagram">
                     </a>
                 </section>
                 <button id="myBtn" onclick="topFunction()" class="footer__btn visbyRegular">Back to top</button>
             </div>
-
-    <script src="./logic/shop.js" type="module"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="../logic/numCart.js" type="module"></script>
+    <script src="../logic/shop.js" type="module"></script>
 </body>
 </html>
