@@ -551,7 +551,7 @@ function renderProducts(product) {
     productInfoSection.innerHTML = `
             <div class="detail__header">
                 <img src="https://firebasestorage.googleapis.com/v0/b/maog-shop.appspot.com/o/images%2Flogo-black.png?alt=media&token=0baf1284-d5f6-4f98-9d0e-0e89dde59004" width="45px" alt="logo">
-                <li class="menu__list__black"><a href="./myCart.html">Cart</a> <div id="cartCounter"> ${cart.length}</div></li>
+                <li class="menu__list__black"><a href="./mycart.html">Cart</a> <div id="cartCounter"> ${cart.length}</div></li>
             </div>
 
             <div class="detail__text visbyMedium">
