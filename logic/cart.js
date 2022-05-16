@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import { getDoc, setDoc, doc } from "firebase/firestore";
 
 async function createFirebaseCart(db, userId, cart) {

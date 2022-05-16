@@ -5,7 +5,6 @@
   "name": "portafolio",
   "description": "portafolio",
   "version": "1.0.0",
-  "main": "./logic/app.js",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.4.1",
     "parcel": "^2.4.1",
@@ -13,6 +12,7 @@
   },
   "scripts": {
     "dev": "parcel ./html/*.html --no-cache",
+    "build": "parcel build --public-url ./ ./html/*.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

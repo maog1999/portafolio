@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import { db } from "./importFirebase";
 import { getProducts } from "./products";
 import { currencyFormat } from "./utils/index";

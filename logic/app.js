@@ -1,6 +1,4 @@
 // Import the functions you need from the SDKs you need
-import { async } from "@firebase/util";
-
 import { login, createUser, addUserToDatabase } from "./auth";
 import { db, auth} from "./importFirebase";
 

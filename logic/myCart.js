@@ -3,7 +3,6 @@ import { onAuthStateChanged } from "firebase/auth";
 import { getFirebaseCart, createFirebaseCart } from "./cart";
 import { getMyCart, addProductToCart } from "./productDetail";
 import { currencyFormat } from "./utils/index";
-import { async } from "@firebase/util";
 import { addDoc, collection, deleteDoc, doc } from "firebase/firestore";
  
 let total = 0;

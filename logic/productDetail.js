@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import { db, auth } from "./importFirebase"
 import { doc, getDoc } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
@@ -73,7 +72,7 @@ function renderProducts (product) {
         if (userLogged) {
             await createFirebaseCart(db, userLogged.uid, cart);
         }
-        
+
         cartCounter.innerText = cart.length;
         console.log(cart.length);
     });
