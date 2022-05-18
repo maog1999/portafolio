@@ -292,7 +292,17 @@ $gray-maog: #8A8A8D;
     }
 }
 @media all and (max-width: 821px){
+    .header {
+        &__logo {
+                & object {
+                    width: 40px;
+                }
+        }
+    }
     .menu{
+        #cartCounter {
+            display: none;
+        }
 
         .menu-hamburguesa {
             display: inline-flex;
@@ -410,7 +420,7 @@ $gray-maog: #8A8A8D;
     .shop{
         .shop__filters{
             margin-right: 0;
-            margin-left: 248px;
+            margin-left: 140px;
         }
 
         .filters__right{
@@ -424,8 +434,11 @@ $gray-maog: #8A8A8D;
         }
 
         .products{
-            padding-left: 50px;
+            padding-left: -50px;
+            margin-left: 10px;
         }
+
+      
     }
     .detail{
         display: block;
@@ -623,7 +636,7 @@ $gray-maog: #8A8A8D;
     .shop{
         .shop__filters{
             margin-right: 0;
-            margin-left: 140px;
+            margin-left: 40px;
 
         
         }

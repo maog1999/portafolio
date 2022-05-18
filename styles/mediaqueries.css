@@ -228,6 +228,9 @@
 }
 
 @media all and (max-width: 820px) {
+  .header__logo {
+    margin-left: 59px;
+  }
   .cart {
     display: block;
   }

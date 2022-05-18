@@ -244,6 +244,14 @@
 }
 
 @media (max-width: 821px) {
+  .header__logo object {
+    width: 40px;
+  }
+
+  .menu #cartCounter {
+    display: none;
+  }
+
   .menu .menu-hamburguesa {
     display: inline-flex;
   }
@@ -341,7 +349,7 @@
   }
 
   .shop .shop__filters {
-    margin-left: 248px;
+    margin-left: 140px;
     margin-right: 0;
   }
 
@@ -356,7 +364,8 @@
   }
 
   .shop .products {
-    padding-left: 50px;
+    margin-left: 10px;
+    padding-left: -50px;
   }
 
   .detail {
@@ -534,7 +543,7 @@
   }
 
   .shop .shop__filters {
-    margin-left: 140px;
+    margin-left: 40px;
     margin-right: 0;
   }
 
