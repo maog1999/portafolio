@@ -56,11 +56,28 @@ function renderProducts (product) {
 
             <div class="detail__btn">
             <img src="https://firebasestorage.googleapis.com/v0/b/maog-shop.appspot.com/o/images%2Fcounter.png?alt=media&token=0f9a670c-fa0e-4d11-a8e3-658dda8642fd" width="" alt="contador">
-            <button class="btn__cart">Add to cart</button>
+                <button class="cart-button">
+                    <span class="add-to-cart">Add to cart</span>
+                    <span class="added">Added</span>
+                    <i class="fas fa-shopping-cart"></i>
+                    <i class="fas fa-box"></i>
+                </button>
             </div>
-    `
+            `
+            //<button class="btn__cart">Add to cart</button>
 
-    const addToCartBtn = productInfoSection.querySelector(".btn__cart");
+    const cartButtons = document.querySelectorAll('.cart-button');
+
+        cartButtons.forEach(button => {
+            button.addEventListener('click', cartClick);
+        });
+
+    function cartClick() {
+        let button = this;
+        button.classList.add('clicked');
+    
+    }   
+    const addToCartBtn = productInfoSection.querySelector(".cart-button");
     const cartCounter = productInfoSection.querySelector("#cartCounter");
 
     addToCartBtn.addEventListener("click", async (e) => {

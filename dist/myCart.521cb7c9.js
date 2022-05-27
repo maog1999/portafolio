@@ -527,6 +527,7 @@ const cartResume = document.getElementById("cart__resume");
 const cartPriceTotal = document.getElementById("cart__total__info__inside");
 const checkoutInfo = document.getElementById("checkoutInfo");
 const btnCheckout = document.getElementById("btnCheckout");
+const btnNewCheckout = document.getElementById("order");
 function loadCart(cart1) {
     total = 0;
     cart1.forEach((product)=>{
@@ -598,7 +599,7 @@ const createOrder = async (userData)=>{
         console.log(e);
     }
 };
-btnCheckout.addEventListener("click", (e)=>{
+btnNewCheckout.addEventListener("click", (e)=>{
     e.preventDefault();
     const name = checkoutInfo.name.value;
     const id = checkoutInfo.id.value;
@@ -613,7 +614,30 @@ btnCheckout.addEventListener("click", (e)=>{
         else alert("Completa todos los campos");
     } else alert("Aún no tienes productos en el carrito :(");
 });
-_auth.onAuthStateChanged(_importFirebase.auth, async (user)=>{
+/*
+btnCheckout.addEventListener("click", e => {
+  e.preventDefault();
+  const name = checkoutInfo.name.value;
+  const id = checkoutInfo.id.value;
+  const adress = checkoutInfo.adress.value;
+
+  
+  const userData = {
+    name, 
+    id,
+    adress
+  }
+
+  if(cart.length){
+    if(name && id  && adress) {
+      createOrder(userData);
+    } else {
+      alert("Completa todos los campos");
+    }
+  } else{
+    alert("Aún no tienes productos en el carrito :(")
+  }
+});*/ _auth.onAuthStateChanged(_importFirebase.auth, async (user)=>{
     if (user) {
         userLogged = user;
         cart = await _cart.getFirebaseCart(_importFirebase.db, userLogged.uid);

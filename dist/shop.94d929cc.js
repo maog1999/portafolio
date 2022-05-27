@@ -520,6 +520,30 @@ var _index = require("./utils/index");
 const productSection = document.getElementById("products");
 const sort = document.getElementById("sort");
 const filter = document.getElementById("filter");
+//----------Cursor animation-----------
+const cursorTag = document.querySelector("div.cursors");
+const balls = cursorTag.querySelectorAll("div");
+const ballMessage = cursorTag.querySelector("div span");
+let aimX = 0;
+let aimY = 0;
+balls.forEach((ball, index)=>{
+    let currentX = 0;
+    let currentY = 0;
+    let speed = 0.2 - index * 0.015;
+    const animate = function() {
+        currentX += (aimX - currentX) * speed;
+        currentY += (aimY - currentY) * speed;
+        ball.style.left = currentX + "px";
+        ball.style.top = currentY + "px";
+        requestAnimationFrame(animate);
+    };
+    animate();
+});
+document.addEventListener("mousemove", function(event) {
+    aimX = event.pageX;
+    aimY = event.pageY;
+});
+//----------End Cursor animation----------
 ScrollReveal().reveal('.products', {
     delay: 1000,
     duration: 1500,
@@ -558,13 +582,24 @@ function renderProducts(item) {
     const coverImage = item.images ? item.images[0] : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.101-help.com%2Fc0f5234e26-icono-broken-image-en-google-chrome-browser%2F&psig=AOvVaw2pfrdI-2iiP9GY3ImEUq_N&ust=1651205257679000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCKiqzInxtfcCFQAAAAAdAAAAABAN";
     product.innerHTML = `
         <div class = "imgAnimation">
-        <img src="${coverImage}" alt="" class="product__image">
+        <img src="${coverImage}" alt="" class="product__image" data-hover="¡Buy now!">
         </div>
         <div class="product__info">
             <p class="product__name">${item.name}</p>
             <p class="product__price">${_index.currencyFormat(item.price)}</p>
         </div>
     `;
+    //---------Hover image animation----------------
+    const images = product.querySelectorAll("img[data-hover]");
+    images.forEach((image)=>{
+        image.addEventListener("mouseover", function() {
+            ballMessage.classList.add("visible");
+            ballMessage.innerHTML = image.getAttribute("data-hover");
+        });
+        image.addEventListener("mouseout", function() {
+            ballMessage.classList.remove("visible");
+        });
+    });
     productSection.appendChild(product);
 }
 async function filtersAction() {
